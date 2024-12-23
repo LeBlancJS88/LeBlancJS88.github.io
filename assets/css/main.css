@@ -2057,8 +2057,19 @@ input[type="radio"] {
     }
 
     .image.thumb {
+        width: 300px; /* Set a uniform width for all thumbnails */
+        height: 250px; /* Set a uniform height */
+        overflow: hidden; /* Ensures content stays within bounds */
+        border-radius: 0.35em; /* Keep rounded corners for consistency */
         text-align: center;
     }
+
+        .image.thumb img {
+            width: 100%; /* Scale image to fill the width of the container */
+            height: 100%; /* Scale image to fill the height */
+            object-fit: cover; /* Crop images proportionally to fit the container */
+            display: block; /* Prevent inline spacing issues */
+        }
 
         .image.thumb:after {
             -moz-transition: opacity 0.2s ease-in-out;
