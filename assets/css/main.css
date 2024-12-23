@@ -2056,6 +2056,8 @@ input[type="radio"] {
         width: 100%;
     }
 
+    /*Custom CSS for Thumbnail Uniformity by Jeremy */
+
     .image.thumb {
         width: 300px; /* Set a uniform width for all thumbnails */
         height: 250px; /* Set a uniform height */
