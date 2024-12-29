@@ -2607,11 +2607,12 @@ input[type="button"],
     color: rgba(255, 255, 255, 0.5);
     height: 100%;
     left: 0;
-    padding: 8em 4em;
+    padding: 4em 2em;
     position: fixed;
     text-align: right;
     top: 0;
     width: 35%;
+    max-width: 600px;
 }
 
     #header > * {
@@ -2649,17 +2650,17 @@ input[type="button"],
     #header nav ul {
         list-style: none;
         padding: 0;
-        margin: 1em 0;
+        margin: 2em 0;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 25px;
         align-items: flex-end;
         text-align: center;
     }
 
         #header nav ul li a {
             color: rgba(255, 255, 255, 0.85);
-            font-size: 1.1em;
+            font-size: 1.25em;
             font-weight: bold;
             text-decoration: none;
             transition: color 0.3s ease, transform 0.3s ease;
@@ -3002,6 +3003,7 @@ input[type="button"],
     position: relative;
     width: 100%;
     max-width: 600px; /* Adjust as needed */
+    max-height: 300px; /* Adjust as needed */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 0.5em; /* Optional: Rounded corners */
