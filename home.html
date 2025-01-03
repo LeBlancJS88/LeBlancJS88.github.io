@@ -16,7 +16,7 @@
     <!-- Header -->
     <header id="header">
         <div class="inner">
-            <a href="home.html" class="image avatar"><img src="images/avatar.png" alt="" /></a>
+            <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="" /></a>
             <h1>
                 <strong>Jeremy LeBlanc</strong> <br />
                 Visual Effects Artist <br />
@@ -32,6 +32,7 @@
                 </ul>
             </nav>
         </div>
+        <!-- Dark Mode Toggle -->
         <div id="theme-toggle" class="theme-icon">
             <i class="fas fa-moon"></i>
         </div>
@@ -44,84 +45,60 @@
         <section id="one">
             <header class="major">
                 <h2>
-                    I Make Neat Visuals for Games, <br />
-                    Hopefully Without Breaking Everything
+                    I Make Neat Visuals for Games, Hopefully Without Breaking Everything
                 </h2>
             </header>
-            <p>
-                Hi, I'm Jeremy. I create visual effects and technical solutions for games because someone has to make the shiny things sparkle and the complicated things (mostly) work. Whether it's making weather look cool, fixing shader hiccups, or just making sure your game doesn't crash as often, I'm here for it. When I'm not arguing with software or accidentally discovering 'features,' I'm probably thinking up new ideas, experimenting with tools, or looking for an excuse to make something glow.
-            </p>
         </section>
 
-        <!-- Professional Background -->
-        <section id="background">
-            <header class="major">
-                <h2>Professional Background</h2>
-            </header>
-            <p>
-                My journey into game development started at Jyvaskyla University of Applied Sciences, where I worked on projects such as <strong>Mortimer: First Launch</strong> and <strong>Harmony in the Wild</strong>. Over the years, I've honed my expertise in creating visually striking effects and solving technical challenges, balancing creativity with problem-solving.
-                Currently, I'm focused on pushing the boundaries of shader development and crafting dynamic VFX systems for interactive media.
-            </p>
-        </section>
-
-        <!-- Skills and Expertise -->
-        <section id="skills">
-            <header class="major">
-                <h2>Skills and Expertise</h2>
-            </header>
-            <ul>
-                <li><strong>Technical Skills:</strong> Unity, Blender, VFX Graph, shader programming, and real-time rendering.</li>
-                <li><strong>Creative Skills:</strong> Toon-shading techniques, particle effects, and procedural art generation.</li>
-                <li><strong>Soft Skills:</strong> Collaboration, problem-solving, and adaptability.</li>
-            </ul>
-        </section>
-
-        <!-- Personal Interests -->
-        <section id="interests">
-            <header class="major">
-                <h2>Personal Interests</h2>
-            </header>
-            <p>
-                When I'm not working on VFX or technical art, you'll probably find me tinkering with PC rigs, exploring interactive art, or diving into the latest games. I also enjoy finding creative ways to bring quirky ideas to life-like turning plumbing pipes into potato launchers for game mechanics!
-            </p>
-        </section>
-
-        <!-- Three -->
-        <section id="three">
-            <h2>Get In Touch</h2>
-            <p>For all inquiries about my work please use the contact form below.</p>
-            <div class="row">
-                <div class="col-8 col-12-small">
-                    <form method="post" action="#">
-                        <div class="row gtr-uniform gtr-50">
-                            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                            <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                        </div>
-                    </form>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" /></li>
-                    </ul>
-                </div>
-                <div class="col-4 col-12-small">
-                    <ul class="labeled-icons">
-                        <li>
-                            <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                            Nasintie 2, A3.<br />
-                            Jyvaskyla, 40250<br />
-                            Finland
-                        </li>
-                        <li>
-                            <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-                            +358 040-831-3541
-                        </li>
-                        <li>
-                            <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                            <a href="#">LeBlancJS88@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
+        <!-- Showcase -->
+        <section id="showcase">
+            <h2>Showcase</h2>
+            <div class="slideshow">
+                <img src="images/showcase/01.png" alt="VFX Highlight 1" class="active" />
+                <img src="images/showcase/02.png" alt="VFX Highlight 2" />
+                <img src="images/showcase/03.png" alt="VFX Highlight 3" />
+                <img src="images/showcase/04.gif" alt="VFX Highlight 4" />
             </div>
+        </section>
+
+        <!-- Recent Work -->
+        <section id="two">
+            <h2>Recent Work</h2>
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/01.png" class="image fit thumb"><img src="images/thumbs/01.png" alt="Mortimer: First Launch" /></a>
+                    <h3>Mortimer: First Launch</h3>
+                    <p>Third year project at Jyväskylä University of Applied Sciences. We formed mock companies and applied AGILE practices to create a game project. I served as Product Owner, Technical Artist and Visual Effects Artist.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/02.png" class="image fit thumb"><img src="images/thumbs/02.png" alt="Harmony in the Wild" /></a>
+                    <h3>Harmony in the Wild</h3>
+                    <p>This game started as a student project which I volunteered for during my second year at Jyväskylä University of Applied Sceiences, it has since spawned a company, Lumo Creations, which I helped found.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/03.png" class="image fit thumb"><img src="images/thumbs/03.png" alt="Audio Visualization Project" /></a>
+                    <h3>Audio Visualization Project</h3>
+                    <p>A demo project utilizing Fast Fourier Transform in programming to create dynamic, reactive audio visualizations in a scene. Created for Advanced Content for Games course at Jyväskylä University of Applied Sciences.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/04.png" class="image fit thumb"><img src="images/thumbs/04.png" alt="Mobile AR for Android" /></a>
+                    <h3>Mobile AR for Android</h3>
+                    <p>An Android AR app demo made for the Cross Reality course at Jyväskylä University of Applied Sciences. Features several mini-games and tech demonstrations.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/05.png" class="image fit thumb"><img src="images/thumbs/05.png" alt="Darkest Evening of the Year" /></a>
+                    <h3>Darkest Evening of the Year</h3>
+                    <p>Action RPG Prototype made for the Game Engine 2 course at Jyväskylä University of Applied Sciences. I created landscape, visual effects, materials and lighting for the project.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/06.png" class="image fit thumb"><img src="images/thumbs/06.png" alt="The Floor is Lava" /></a>
+                    <h3>The Floor is Lava</h3>
+                    <p>The first "game" I released on itch.io, preserved as a comparison point for how far I have come. This was a solo project during the summer between my first and second years at Jyväskylä University of Applied Sciences, used primarily to retain programming knowledge.</p>
+                </article>
+            </div>
+            <ul class="actions">
+                <li><a href="portfolio.html" class="button">Full Portfolio</a></li>
+            </ul>
         </section>
 
         <!-- Four -->

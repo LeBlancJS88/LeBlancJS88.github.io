@@ -16,16 +16,17 @@
     <!-- Header -->
     <header id="header">
         <div class="inner">
-            <a href="index.html" class="image avatar"><img src="images/avatar.png" alt="" /></a>
+            <a href="home.html" class="image avatar"><img src="images/avatar.png" alt="" /></a>
             <h1>
                 <strong>Jeremy LeBlanc</strong> <br />
                 Visual Effects Artist <br />
                 Technical Artist<br />
-                Professional Problem Magnet <br />
+                Professional Problem Magnet
             </h1>
             <nav>
                 <ul>
                     <li><a href="about.html">About Me</a></li>
+                    <li><a href="demoreels.html">Demo Reels</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="resume.html">Resume</a></li>
                 </ul>
@@ -51,7 +52,7 @@
         <!-- Most Recent Project -->
         <section id="two">
             <header class="major">
-                <h2>Mortimer: First Launch</h2>
+                <h2>Mortimer: First Launch <a href="https://store.steampowered.com/app/3288660/Mortimer_First_Launch/" class="icon brands fa-steam"><span class="label">Mortimer: First Launch on Steam</span></a></h2>
             </header>
             <div>
                 <article class="col-6 col-12-xsmall work-item">
@@ -60,16 +61,135 @@
                     </div>
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in sem quis neque mollis lacinia et quis quam. Integer feugiat nisi purus, ac tempor nisl venenatis sit amet. Morbi in finibus metus. Praesent laoreet fringilla nisi, id faucibus turpis. Integer lacus nunc, finibus et finibus sed, auctor ut est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere enim sit amet luctus euismod. Donec facilisis quis lacus eget tempus. Nunc sed mauris vestibulum, iaculis eros in, tempus sem.<br /><br />
+                Mortimer: First Launch is a 3D adventure puzzle/stealth game created using the Unity Engine (v2022.3.43f1 LTS). In the game, users take control of the titular character, Mortimer, and guide him on his journey to build a rocket and reach the moon so that he can eat the cheese he believes it is made of. Users must navigate the environment, avoid humans, utilize stealth and solve puzzles to achieve the goals of collecting rocket parts and blasting off to the stars. The game takes place in a fictionalized version of Hatbill Park in Florida, near the Kennedy Space Center, and is presented in a third-person, over the shoulder camera perspective which makes use of toon shading for the visuals. <br /><br />
 
-                Quisque consectetur fermentum placerat. Nunc rhoncus, ligula ullamcorper venenatis elementum, lacus odio volutpat sem, quis auctor tellus nulla quis elit. Ut pulvinar ornare massa ut interdum. Nunc nulla nibh, pharetra posuere feugiat nec, malesuada id mauris. Nullam volutpat blandit tempor. Donec id diam eros. Vivamus vulputate ligula sed lectus consequat congue.
+                It was made by a team of five student developers, including myself, over the course of three months as a part of the Ticorporate Demo Lab course at Jyvaskyla University of Applied Sciences. The idea behind Ticorporate Demo Lab is that we would first come up with ideas, then pitch them in pairs with the six best projects being selected by peer voting. Once the projects had been selected, it was then up to the winning pairs to form groups of five to seven developers around which they would create a mock company for the development of the game. There were two layers to the process, the first and most obvious being the development aspect where the team would focus on the product, what it is, what it needed to be, and how they would achieve their goals. The other aspect was organizing the development team into an AGILE structure, with a Product Owner (PO), Scrum Master (SM), and Producer handling the administrative tasks as well as the scrum and sprint cycles. Additional admin roles were Business, Marketing, and Publishing.
+            </p>
+        </section>
+
+        <!-- Responsibilities -->
+        <section>
+            <h1>Administration</h1>
+            <h2>Project Management</h2>
+            <img src="images/portfolio/projectview.png" alt="Project View" class="section-image" />
+            <p>
+                For the duration of this project, I served as Product Owner of our team as we attempted to employ AGILE processes, overseeing the project from concept to completion. I was responsible for the creation of the project's vision, the development of the project's roadmap, and the prioritization of the project's backlog. The project backlog was created and maintained using our own private company Github Organization, where we made extensive use of the Github Projects board to track the progress of the project. As mentioned before, the project was developed using AGILE methodologies, with our team's 'sprints lasting two weeks each and bookended by sprint planning and sprint review. <br /><br />
+
+                I created the Github Organization and set up the project board, and was responsible for maintaining the project's vision and roadmap throughout the development process. Individual developers on the team were responsible for creating and maintaining their own tasks on the project board from the backlog items, and I was responsible for ensuring that the project board was up-to-date and that the project was on track to meet its goals.
+            </p>
+        </section>
+
+        <section>
+            <h1>Development</h1>
+            <p> Apart from my administrative role, I also served as both Technical Artist and Visual Effects Artist for the project. My responsibilities for the development of the project were as follows:</p><br />
+            <h2>Shader and Material Creation</h2>
+            <img src="images/portfolio/shadergraphsample.png" alt="Shader Creation Placeholder" class="section-image" />
+            <p>
+                During production of Mortimer: First Launch, I developed four custom shaders using Unity's Shader Graph to meet with the needs of our game. These custom shader graphs included an outline shader, a fresnel glow shader for highlighting objects, a custom shader using flipbook logic to allow for human NPCs with different clothing, and an object shine shader for highlighting interactable objects. These shader graphs were created to be lightweight and optimized for performance.
+            </p>
+
+            <h3>Water Shader</h3>
+            <video class="section-video" autoplay loop muted>
+                <source src="images/portfolio/WaterShader.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>The water shader selected for use in the game is a modified version of <a href="https://staggart.xyz/">Staggart Creations</a>' <a href="https://assetstore.unity.com/packages/vfx/shaders/stylized-water-2-170386">Stylized Water 2</a> shader asset. This asset is highly customizable, comes with a host of built-in features and also supports third party integrations with several other popular ready made assets. (See documentation <a href="https://staggart.xyz/unity/stylized-water-2/sws-2-docs/?section=stylized-water-2">here</a>)</p>
+
+            <p>Using this asset as a base, I set up a material that would mimick swampy water and then worked through several iterations of art style, visuals and overall design for the look of the water. This process was aided by gathering feedback from my team members as well as getting impressions from individuals outside of the project. The water in our project was further enhanced by adding on functionality for enhanced dynamic effects - underwater rendering, normal displacement for simulating waves and ripples, and splash functionality which would respond to the character or objects dropped into the water, passing the information into the GPU buffer to be read by the shader for further normal displacement and realism.</p>
+        </section>
+
+        <section>
+            <h2>Real-Time Visual Effects</h2>
+            <img src="images/portfolio/vfxgraph.png" alt="VFX Graph" class="section-image" />
+            <p>
+                In <strong>Mortimer: First Launch</strong>, I created a total of 10 distinct visual effects using Unity's VFX Graph and Particle System. These effects were carefully designed to enhance the game's whimsical tone while maintaining visual consistency. Four of the effects were built using VFX Graph for high-impact, dynamic visuals, while six utilized the Particle System for more straightforward yet effective animations.
+            </p>
+            <h3>VFX Graph Effects</h3>
+            <ul>
+                <li><strong>Campfire</strong>: A dynamic, flickering fire effect used to represent campfires in the game. This effect added warmth and life to the environment.</li>
+                <li><strong>Guiding Wind</strong>: A sweeping particle effect that emanates from food items, winding its way toward Mortimer. This serves as a subtle yet intuitive directional guide for players.</li>
+                <li><strong>Rockets and Moons</strong>: A playful effect where 3D mesh particles resembling rockets and moons orbit Mortimer's head after he loses a life and respawns. Inspired by classic Looney Tunes visuals, it adds a lighthearted touch to the game.</li>
+                <li><strong>Stylized Rocket Smoke</strong>: A highly stylized VFX graph used during the Space Shuttle launch sequence in the tutorial. The effect simulates cartoonish smoke trails, creating an engaging and memorable cinematic moment.</li>
+            </ul>
+            <video class="section-video" autoplay loop muted>
+                <source src="images/portfolio/VFXGraph.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> <br />
+            <h3>Particle System Effects</h3>
+            <ul>
+                <li><strong>Bonfire</strong>: A complementary, static bonfire effect used in background scenes for ambiance.</li>
+                <li><strong>Conveyor Belt Smoke</strong>: Puffs of cartoonish smoke emitted from the end of a conveyor belt after Mortimer activates it, emphasizing interaction with the environment.</li>
+                <li><strong>Landing Smoke</strong>: A burst of cartoon-style smoke triggered when Mortimer lands from a significant height, adding weight and feedback to his movement.</li>
+                <li><strong>Mortimer Eating</strong>: A chaotic, comic-book-inspired effect featuring clouds of smoke, shooting lines, colorful debris, and animated "nom nom nom" text. This hides object swaps and dramatizes Mortimer's eating animations.</li>
+                <li><strong>Soda Bottle Drop</strong>: A playful smoke puff that occurs when Mortimer drops a bag of soda bottles off a conveyor belt, reinforcing cause-and-effect mechanics.</li>
+                <li><strong>Water Splash</strong>: A cartoony splash effect with ripples at impact points, triggered when Mortimer jumps or falls into water, bringing life to the game's aquatic elements.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Lighting and Post-Processing</h2>
+            <img src="placeholder4.jpg" alt="Lighting Placeholder" class="section-image" />
+            <p>
+                In <strong>Mortimer: First Launch</strong>, I designed the lighting to mimic the ambiance of a summer sunset. Using a directional light positioned as a setting sun in the west (negative X rotation), I shifted the color palette towards soft pastel tones of orange and pink. This approach ensured the lighting felt natural and believable while complementing the vibrant colors in the scene without overwhelming them. Shadows were carefully adjusted to balance the moody sunset aesthetic with the practical need for visibility, further offset by a secondary directional light set to low intensity pointed in opposition to the main directional light, enhancing the player's experience.
+            </p>
+            <p>
+                For performance and flexibility, I opted for dynamic, real-time lighting instead of baked lighting. This decision reduced the need for time-consuming GPU lightmap bakes during development and allowed for potential future implementation of a day/night cycle without additional rework.
+            </p>
+            <p>
+                Post-processing was implemented through a global volume, leveraging advanced techniques to further enhance the visual fidelity of the game. The following effects were applied:
+            </p>
+            <ul>
+                <li><strong>Bloom</strong>: To create a subtle glow around brighter areas and emphasize highlights.</li>
+                <li><strong>Tonemapping</strong>: For adjusting the overall tone and dynamic range of the scene.</li>
+                <li><strong>Film Grain</strong>: To add texture and a cinematic feel to the visuals.</li>
+                <li><strong>Lift, Gamma, Gain</strong>: For precise control over brightness and contrast in different tonal ranges.</li>
+                <li><strong>Shadows, Midtones, Highlights</strong>: To fine-tune color balance and contrast across specific tonal areas.</li>
+                <li><strong>Channel Mixer</strong>: For advanced color adjustments and balancing.</li>
+                <li><strong>Color Grading</strong>: To harmonize the overall color palette and enhance the sunset-inspired aesthetic.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Environmental Creation</h2>
+            <img src="placeholder5.jpg" alt="Environment Design Placeholder" class="section-image" />
+            <p>
+                The primary focus of the environmental design in <strong>Mortimer: First Launch</strong> was to establish a sense of believable realism. The goal was to create an environment that felt authentic enough for those familiar with the real Hatbill Park in Florida to recognize specific sections of the waterways, even with the limitations of vegetation detail and the addition of fantastical elements.
+            </p>
+            <p>
+                I created the terrain myself, using a modified satellite image of the Hatbill Park area provided by our lead designer. This terrain included waterways, three campgrounds, and a small township named Utopia, situated in the northwest corner. Using the satellite image as a guide, I traced the waterways with Unity's terrain tools to establish the basic structure. Feedback led to the inclusion of a prominent hill within Hatbill Park, designed as a viewpoint and landmark for player navigation.
+            </p>
+            <p>
+                The workflow relied on importing the designer's image and transforming it into a semi-transparent material applied to a plane. This served as a tracing paper overlay, scaled to match the terrain at a 1:1 ratio. Unity's Terrain Tools asset pack was instrumental in sculpting, smoothing, and refining the terrain.
+            </p>
+            <p>
+                Vegetation was placed using <a href="https://staggart.xyz/">Staggart Creations</a>' Vegetation Spawner, while <a href="https://assetstore.unity.com/packages/tools/terrain/procedural-terrain-painter-188357">Terrain Painter</a> by Staggart Creations was used to create detailed terrain texture layers. Grass was generated using <a href="https://www.patreon.com/c/minionsart/posts">Minions Art</a>'s Computer Shader grass tool, ensuring a lush and visually consistent environment.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Art and Optimization</h2>
+            <img src="placeholder6.jpg" alt="Technical Art Placeholder" class="section-image" />
+            <p>
+                My work on <strong>Mortimer: First Launch</strong> involved extensive optimization and technical art responsibilities to ensure the game maintained a balance between visual fidelity and performance. I focused heavily on baking and refining occlusion culling maps, modifying Levels of Detail (LoDs) to achieve optimal rendering, and adjusting the number of vegetation items spawned in the scene to provide high-quality visuals without compromising performance. Additionally, I handled the implementation of all assets, verifying their proper integration into the game world, and reporting bugs to the QA Lead or respective team members when issues arose.
+            </p>
+            <p>
+                One major performance challenge occurred after vegetation was fully implemented on the completed terrain, causing significant FPS drops. To address this, I employed a multi-faceted optimization strategy:
+            </p>
+            <ul>
+                <li>Modified LoDs to balance rendering detail with performance.</li>
+                <li>Reduced the number of vegetation instances in the terrain while maintaining visual consistency.</li>
+                <li>Split the terrain into smaller chunks to be loaded on demand, reducing resource overhead.</li>
+                <li>Divided parts of the game world into separate scenes to be loaded additively when needed, improving overall efficiency.</li>
+            </ul>
+            <p>
+                An additional issue arose in the Hatbill Park campground, where severe FPS drops occurred, even when viewed from a distance. After thorough investigation, I discovered that a 3D chain-link and barbed wire fence model created by our Art Lead was the cause. Disabling the barbed wire portion of the model resolved the issue, allowing me to deliver detailed bug reports and findings to the artist. Through collaboration, the model was reworked, and the problem was permanently resolved.
             </p>
         </section>
 
         <!-- Second Most Recent Project -->
         <section id="two">
             <header class="major">
-                <h2>Harmony in the Wild</h2>
+                <h2>Harmony in the Wild <a href="https://store.steampowered.com/app/3360850/Harmony_in_the_Wild/" class="icon brands fa-steam"><span class="label">Harmony in the Wild on Steam</span></a></h2>
             </header>
             <div>
                 <article class="col-6 col-12-xsmall work-item">
@@ -85,7 +205,7 @@
         <!-- Third Most Recent Project -->
         <section id="interests">
             <header class="major">
-                <h2>Floor is Lava</h2>
+                <h2>Floor is Lava <a href="#" class="icon brands fa-itch-io"><span class="label">Floor is Lava on itch.io</span></a></h2>
             </header>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in sem quis neque mollis lacinia et quis quam. Integer feugiat nisi purus, ac tempor nisl venenatis sit amet. Morbi in finibus metus. Praesent laoreet fringilla nisi, id faucibus turpis. Integer lacus nunc, finibus et finibus sed, auctor ut est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere enim sit amet luctus euismod. Donec facilisis quis lacus eget tempus. Nunc sed mauris vestibulum, iaculis eros in, tempus sem.<br /><br />
@@ -93,327 +213,325 @@
                 Quisque consectetur fermentum placerat. Nunc rhoncus, ligula ullamcorper venenatis elementum, lacus odio volutpat sem, quis auctor tellus nulla quis elit. Ut pulvinar ornare massa ut interdum. Nunc nulla nibh, pharetra posuere feugiat nec, malesuada id mauris. Nullam volutpat blandit tempor. Donec id diam eros. Vivamus vulputate ligula sed lectus consequat congue.
             </p>
         </section>
-
-        <!-- Four -->
-        <!--
-                            <section id="four">
-                                <h2>Elements</h2>
-
-                                <section>
-                                    <h4>Text</h4>
-                                    <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-                                    This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-                                    This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-                                    <hr />
-                                    <header>
-                                        <h4>Heading with a Subtitle</h4>
-                                        <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-                                    </header>
-                                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-                                    <header>
-                                        <h5>Heading with a Subtitle</h5>
-                                        <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-                                    </header>
-                                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-                                    <hr />
-                                    <h2>Heading Level 2</h2>
-                                    <h3>Heading Level 3</h3>
-                                    <h4>Heading Level 4</h4>
-                                    <h5>Heading Level 5</h5>
-                                    <h6>Heading Level 6</h6>
-                                    <hr />
-                                    <h5>Blockquote</h5>
-                                    <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-                                    <h5>Preformatted</h5>
-                                    <pre><code>i = 0;
-
-        while (!deck.isInOrder()) {
-        print 'Iteration ' + i;
-        deck.shuffle();
-        i++;
-        }
-
-        print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-                                </section>
-
-                                <section>
-                                    <h4>Lists</h4>
-                                    <div class="row">
-                                        <div class="col-6 col-12-xsmall">
-                                            <h5>Unordered</h5>
-                                            <ul>
-                                                <li>Dolor pulvinar etiam magna etiam.</li>
-                                                <li>Sagittis adipiscing lorem eleifend.</li>
-                                                <li>Felis enim feugiat dolore viverra.</li>
-                                            </ul>
-                                            <h5>Alternate</h5>
-                                            <ul class="alt">
-                                                <li>Dolor pulvinar etiam magna etiam.</li>
-                                                <li>Sagittis adipiscing lorem eleifend.</li>
-                                                <li>Felis enim feugiat dolore viverra.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6 col-12-xsmall">
-                                            <h5>Ordered</h5>
-                                            <ol>
-                                                <li>Dolor pulvinar etiam magna etiam.</li>
-                                                <li>Etiam vel felis at lorem sed viverra.</li>
-                                                <li>Felis enim feugiat dolore viverra.</li>
-                                                <li>Dolor pulvinar etiam magna etiam.</li>
-                                                <li>Etiam vel felis at lorem sed viverra.</li>
-                                                <li>Felis enim feugiat dolore viverra.</li>
-                                            </ol>
-                                            <h5>Icons</h5>
-                                            <ul class="icons">
-                                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                                                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-                                                <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h5>Actions</h5>
-                                    <ul class="actions">
-                                        <li><a href="#" class="button primary">Default</a></li>
-                                        <li><a href="#" class="button">Default</a></li>
-                                    </ul>
-                                    <ul class="actions small">
-                                        <li><a href="#" class="button primary small">Small</a></li>
-                                        <li><a href="#" class="button small">Small</a></li>
-                                    </ul>
-                                    <div class="row">
-                                        <div class="col-6 col-12-small">
-                                            <ul class="actions stacked">
-                                                <li><a href="#" class="button primary">Default</a></li>
-                                                <li><a href="#" class="button">Default</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6 col-12-small">
-                                            <ul class="actions stacked">
-                                                <li><a href="#" class="button primary small">Small</a></li>
-                                                <li><a href="#" class="button small">Small</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6 col-12-small">
-                                            <ul class="actions stacked">
-                                                <li><a href="#" class="button primary fit">Default</a></li>
-                                                <li><a href="#" class="button fit">Default</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6 col-12-small">
-                                            <ul class="actions stacked">
-                                                <li><a href="#" class="button primary small fit">Small</a></li>
-                                                <li><a href="#" class="button small fit">Small</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <h4>Table</h4>
-                                    <h5>Default</h5>
-                                    <div class="table-wrapper">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Item One</td>
-                                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                                    <td>29.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Two</td>
-                                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                                    <td>19.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Three</td>
-                                                    <td> Morbi faucibus arcu accumsan lorem.</td>
-                                                    <td>29.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Four</td>
-                                                    <td>Vitae integer tempus condimentum.</td>
-                                                    <td>19.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Five</td>
-                                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                                    <td>29.99</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="2"></td>
-                                                    <td>100.00</td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-
-                                    <h5>Alternate</h5>
-                                    <div class="table-wrapper">
-                                        <table class="alt">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Item One</td>
-                                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                                    <td>29.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Two</td>
-                                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                                    <td>19.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Three</td>
-                                                    <td> Morbi faucibus arcu accumsan lorem.</td>
-                                                    <td>29.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Four</td>
-                                                    <td>Vitae integer tempus condimentum.</td>
-                                                    <td>19.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Item Five</td>
-                                                    <td>Ante turpis integer aliquet porttitor.</td>
-                                                    <td>29.99</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="2"></td>
-                                                    <td>100.00</td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <h4>Buttons</h4>
-                                    <ul class="actions">
-                                        <li><a href="#" class="button primary">Primary</a></li>
-                                        <li><a href="#" class="button">Default</a></li>
-                                    </ul>
-                                    <ul class="actions">
-                                        <li><a href="#" class="button large">Large</a></li>
-                                        <li><a href="#" class="button">Default</a></li>
-                                        <li><a href="#" class="button small">Small</a></li>
-                                    </ul>
-                                    <ul class="actions fit">
-                                        <li><a href="#" class="button primary fit">Fit</a></li>
-                                        <li><a href="#" class="button fit">Fit</a></li>
-                                    </ul>
-                                    <ul class="actions fit small">
-                                        <li><a href="#" class="button primary fit small">Fit + Small</a></li>
-                                        <li><a href="#" class="button fit small">Fit + Small</a></li>
-                                    </ul>
-                                    <ul class="actions">
-                                        <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-                                        <li><a href="#" class="button icon solid fa-download">Icon</a></li>
-                                    </ul>
-                                    <ul class="actions">
-                                        <li><span class="button primary disabled">Primary</span></li>
-                                        <li><span class="button disabled">Default</span></li>
-                                    </ul>
-                                </section>
-
-                                <section>
-                                    <h4>Form</h4>
-                                    <form method="post" action="#">
-                                        <div class="row gtr-uniform gtr-50">
-                                            <div class="col-6 col-12-xsmall">
-                                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-                                            </div>
-                                            <div class="col-6 col-12-xsmall">
-                                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                                            </div>
-                                            <div class="col-12">
-                                                <select name="demo-category" id="demo-category">
-                                                    <option value="">- Category -</option>
-                                                    <option value="1">Manufacturing</option>
-                                                    <option value="1">Shipping</option>
-                                                    <option value="1">Administration</option>
-                                                    <option value="1">Human Resources</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-4 col-12-small">
-                                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                                <label for="demo-priority-low">Low Priority</label>
-                                            </div>
-                                            <div class="col-4 col-12-small">
-                                                <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                                <label for="demo-priority-normal">Normal Priority</label>
-                                            </div>
-                                            <div class="col-4 col-12-small">
-                                                <input type="radio" id="demo-priority-high" name="demo-priority">
-                                                <label for="demo-priority-high">High Priority</label>
-                                            </div>
-                                            <div class="col-6 col-12-small">
-                                                <input type="checkbox" id="demo-copy" name="demo-copy">
-                                                <label for="demo-copy">Email me a copy of this message</label>
-                                            </div>
-                                            <div class="col-6 col-12-small">
-                                                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                                <label for="demo-human">I am a human and not a robot</label>
-                                            </div>
-                                            <div class="col-12">
-                                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                                            </div>
-                                            <div class="col-12">
-                                                <ul class="actions">
-                                                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                                                    <li><input type="reset" value="Reset" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </section>
-
-                                <section>
-                                    <h4>Image</h4>
-                                    <h5>Fit</h5>
-                                    <div class="box alt">
-                                        <div class="row gtr-50 gtr-uniform">
-                                            <div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-                                        </div>
-                                    </div>
-                                    <h5>Left &amp; Right</h5>
-                                    <p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-                                    <p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-                                </section>
-
-                            </section>
-                        -->
-
     </div>
 
+    <!-- Four -->
+    <!--
+                        <section id="four">
+                            <h2>Elements</h2>
+
+                            <section>
+                                <h4>Text</h4>
+                                <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+                                This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+                                This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+                                <hr />
+                                <header>
+                                    <h4>Heading with a Subtitle</h4>
+                                    <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+                                </header>
+                                <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+                                <header>
+                                    <h5>Heading with a Subtitle</h5>
+                                    <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+                                </header>
+                                <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+                                <hr />
+                                <h2>Heading Level 2</h2>
+                                <h3>Heading Level 3</h3>
+                                <h4>Heading Level 4</h4>
+                                <h5>Heading Level 5</h5>
+                                <h6>Heading Level 6</h6>
+                                <hr />
+                                <h5>Blockquote</h5>
+                                <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+                                <h5>Preformatted</h5>
+                                <pre><code>i = 0;
+
+    while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+    }
+
+    print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                            </section>
+
+                            <section>
+                                <h4>Lists</h4>
+                                <div class="row">
+                                    <div class="col-6 col-12-xsmall">
+                                        <h5>Unordered</h5>
+                                        <ul>
+                                            <li>Dolor pulvinar etiam magna etiam.</li>
+                                            <li>Sagittis adipiscing lorem eleifend.</li>
+                                            <li>Felis enim feugiat dolore viverra.</li>
+                                        </ul>
+                                        <h5>Alternate</h5>
+                                        <ul class="alt">
+                                            <li>Dolor pulvinar etiam magna etiam.</li>
+                                            <li>Sagittis adipiscing lorem eleifend.</li>
+                                            <li>Felis enim feugiat dolore viverra.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-xsmall">
+                                        <h5>Ordered</h5>
+                                        <ol>
+                                            <li>Dolor pulvinar etiam magna etiam.</li>
+                                            <li>Etiam vel felis at lorem sed viverra.</li>
+                                            <li>Felis enim feugiat dolore viverra.</li>
+                                            <li>Dolor pulvinar etiam magna etiam.</li>
+                                            <li>Etiam vel felis at lorem sed viverra.</li>
+                                            <li>Felis enim feugiat dolore viverra.</li>
+                                        </ol>
+                                        <h5>Icons</h5>
+                                        <ul class="icons">
+                                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                            <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                                            <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                                            <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h5>Actions</h5>
+                                <ul class="actions">
+                                    <li><a href="#" class="button primary">Default</a></li>
+                                    <li><a href="#" class="button">Default</a></li>
+                                </ul>
+                                <ul class="actions small">
+                                    <li><a href="#" class="button primary small">Small</a></li>
+                                    <li><a href="#" class="button small">Small</a></li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-6 col-12-small">
+                                        <ul class="actions stacked">
+                                            <li><a href="#" class="button primary">Default</a></li>
+                                            <li><a href="#" class="button">Default</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <ul class="actions stacked">
+                                            <li><a href="#" class="button primary small">Small</a></li>
+                                            <li><a href="#" class="button small">Small</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <ul class="actions stacked">
+                                            <li><a href="#" class="button primary fit">Default</a></li>
+                                            <li><a href="#" class="button fit">Default</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <ul class="actions stacked">
+                                            <li><a href="#" class="button primary small fit">Small</a></li>
+                                            <li><a href="#" class="button small fit">Small</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h4>Table</h4>
+                                <h5>Default</h5>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Item One</td>
+                                                <td>Ante turpis integer aliquet porttitor.</td>
+                                                <td>29.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Two</td>
+                                                <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                                <td>19.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Three</td>
+                                                <td> Morbi faucibus arcu accumsan lorem.</td>
+                                                <td>29.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Four</td>
+                                                <td>Vitae integer tempus condimentum.</td>
+                                                <td>19.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Five</td>
+                                                <td>Ante turpis integer aliquet porttitor.</td>
+                                                <td>29.99</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="2"></td>
+                                                <td>100.00</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                                <h5>Alternate</h5>
+                                <div class="table-wrapper">
+                                    <table class="alt">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Item One</td>
+                                                <td>Ante turpis integer aliquet porttitor.</td>
+                                                <td>29.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Two</td>
+                                                <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                                <td>19.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Three</td>
+                                                <td> Morbi faucibus arcu accumsan lorem.</td>
+                                                <td>29.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Four</td>
+                                                <td>Vitae integer tempus condimentum.</td>
+                                                <td>19.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item Five</td>
+                                                <td>Ante turpis integer aliquet porttitor.</td>
+                                                <td>29.99</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="2"></td>
+                                                <td>100.00</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h4>Buttons</h4>
+                                <ul class="actions">
+                                    <li><a href="#" class="button primary">Primary</a></li>
+                                    <li><a href="#" class="button">Default</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <li><a href="#" class="button large">Large</a></li>
+                                    <li><a href="#" class="button">Default</a></li>
+                                    <li><a href="#" class="button small">Small</a></li>
+                                </ul>
+                                <ul class="actions fit">
+                                    <li><a href="#" class="button primary fit">Fit</a></li>
+                                    <li><a href="#" class="button fit">Fit</a></li>
+                                </ul>
+                                <ul class="actions fit small">
+                                    <li><a href="#" class="button primary fit small">Fit + Small</a></li>
+                                    <li><a href="#" class="button fit small">Fit + Small</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                                    <li><a href="#" class="button icon solid fa-download">Icon</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <li><span class="button primary disabled">Primary</span></li>
+                                    <li><span class="button disabled">Default</span></li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Form</h4>
+                                <form method="post" action="#">
+                                    <div class="row gtr-uniform gtr-50">
+                                        <div class="col-6 col-12-xsmall">
+                                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                                        </div>
+                                        <div class="col-6 col-12-xsmall">
+                                            <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                                        </div>
+                                        <div class="col-12">
+                                            <select name="demo-category" id="demo-category">
+                                                <option value="">- Category -</option>
+                                                <option value="1">Manufacturing</option>
+                                                <option value="1">Shipping</option>
+                                                <option value="1">Administration</option>
+                                                <option value="1">Human Resources</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4 col-12-small">
+                                            <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                            <label for="demo-priority-low">Low Priority</label>
+                                        </div>
+                                        <div class="col-4 col-12-small">
+                                            <input type="radio" id="demo-priority-normal" name="demo-priority">
+                                            <label for="demo-priority-normal">Normal Priority</label>
+                                        </div>
+                                        <div class="col-4 col-12-small">
+                                            <input type="radio" id="demo-priority-high" name="demo-priority">
+                                            <label for="demo-priority-high">High Priority</label>
+                                        </div>
+                                        <div class="col-6 col-12-small">
+                                            <input type="checkbox" id="demo-copy" name="demo-copy">
+                                            <label for="demo-copy">Email me a copy of this message</label>
+                                        </div>
+                                        <div class="col-6 col-12-small">
+                                            <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                            <label for="demo-human">I am a human and not a robot</label>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <ul class="actions">
+                                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                                                <li><input type="reset" value="Reset" /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+
+                            <section>
+                                <h4>Image</h4>
+                                <h5>Fit</h5>
+                                <div class="box alt">
+                                    <div class="row gtr-50 gtr-uniform">
+                                        <div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+                                        <div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+                                    </div>
+                                </div>
+                                <h5>Left &amp; Right</h5>
+                                <p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                                <p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                            </section>
+
+                        </section>
+                    -->
     <!-- Footer -->
     <footer id="footer">
         <div class="inner">
