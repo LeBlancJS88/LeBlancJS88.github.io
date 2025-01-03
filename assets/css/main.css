@@ -100,7 +100,7 @@ body {
     }
 
 body, input, select, textarea {
-    color: #a2a2a2;
+    color: #000000;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16pt;
     font-weight: 400;
@@ -2154,18 +2154,34 @@ input[type="radio"] {
             width: 100%;
         }
 
+.section-image {
+    width: 50%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.section-video {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
 /* New CSS Rule for Portfolio Page */
 .portfolio-img {
     display: block;
     width: 100%;
     height: 250px;
-    object-fit: cover; /* Ensures the image is cropped to fit its container */
+    object-fit: cover;
     border: none;
     box-shadow: none;
-    transition: none; /* No hover effects */
-    pointer-events: none; /* Disables click functionality */
-    max-height: 400px; /* Ensures it doesn’t become too tall */
-    overflow: hidden; /* Ensures it crops if the aspect ratio is unusual */
+    transition: none;
+    pointer-events: none;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 /* List */
