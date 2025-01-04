@@ -100,22 +100,53 @@
 
             <h3>Outline Shader</h3>
             <img src="images/portfolio/outlineshader.png" alt="Outline Shader" class="section-image" />
+            <p>I created a simple, lightweight outline shader using Shader Graph. There was a desire for the powerlines which extend between utility poles at one of the campgrounds to have the same outlined look that trees and other objects do, but as the powerlines have movement built into them with a shader I needed to create an additional material layer to add on top of it, this shader is the result of that work. It works by using the Normal Vector in object space, normalizing it, and scaling it by a controllable Outline Thickness value. This scaled vector is added to the object's position to create the outline offset. The outline is rendered in the Fragment stage, with a customizable Outline Color and thickness, likely using a back-face culling trick to ensure the outline is visible around the object.</p>
 
             <h3>Fresnel Glow Shader</h3>
             <img src="images/portfolio/fresnelglowshader.png" alt="Fresnel Glow Shader" class="section-image" />
+            <p>A simple fresnel effect shader I made on request to solve an issue with key items in the world not being noticeable enough. We ended up going with a different solution for that particular problem, outlined below in the Object Shine shader, but the shader was kept in the project for potential future use. The shader works by calculating the dot product of the Normal Vector and the View Direction, raising it to a Power value to control the sharpness of the effect. This result is multiplied by a selectable Fresnel Color which is added to the base color in the fragment stage. The shader outputs a glow-like appearance around the edges of the object, with control over intensity and color through the exposed properties.</p>
 
             <h3>Human Flipbook Shader</h3>
             <img src="images/portfolio/humanflipbookshader.png" alt="Human Flipbook Shader" class="section-image" />
+            <p>The human NPCs in <strong>Mortimer</strong> went through several iterations in terms of look and feel. The initial concept was to make them appear strange, frightening and almost monstrous as they might be interpreted by a Raccoon's eye. This concept was later scrapped as it wasn't working how we wanted it to. Our Lead Programmer came up with a flipbook node structure through which a selection of textures could be randomly assigned via scripting upon NPC instantiation, allowing for different looks for the characters while still appearing strange. This iteration was better, but still not quite what we wanted. My solution took our programmer's flipbook structure and added the following:</p>
+            <ul>
+                <li><strong>Toon Shading:</strong> Added a color ramp for simplified lighting bands, giving the characters a stylized cartoon look.</li>
+                <li><strong>Fresnel Glow:</strong> Implemented edge highlighting to emphasize character silhouettes and increase their separation from the background.</li>
+                <li><strong>Dynamic Flipbook Textures:</strong> Enhanced the existing flipbook structure to cycle through pre-baked textures, allowing for unique appearances per NPC while retaining their strange, otherworldly style.</li>
+            </ul>
+
+            <p>In the end, this re-worked shader allowed for 16 options for each category (Skin, Shirt, Pants and Shoes), allowing for 65,536 unique combinations of humans which can exist with roughly a 3.7% chance of 2 NPCs in 100 instantiating using the same exact look.</p>
 
             <h3>Object Shine Shader</h3>
             <img src="images/portfolio/objectshineshader.png" alt="Object Shine Shader" class="section-image" />
 
+            <p>This shader was our team's chosen solution for highlighting interactable objects during the tutorial and regular gameplay sections. It adds a dynamic, animated, emissive shine effect to objects by scrolling a supplied texture across an objects vertices.  </p>
+            <p>The features of the shader are as follows: </p>
+            <ul>
+                <li><strong>UV Remapping:</strong> The UV coordinates are split, flipped, and recombined to enable directional movement of the shine effect.</li>
+                <li><strong>Scrolling Animation:</strong> Shine speed and direction are controlled by a scrolling UV animation tied to customizable time parameters.</li>
+                <li><strong>Emissive Power:</strong> A power multiplier adjusts the brightness and intensity of the shine, blending seamlessly with the object's base texture.</li>
+                <li><strong>Dynamic Control:</strong> Boolean properties allow toggling the shine effect on or off and adjusting its parameters dynamically via scripts.</li>
+            </ul>
+
+            <p>A brief explanation of how it works:</p>
+
+            <ol>
+                <li> The UV Coordinates define how a texture is wrapped around an object's vertices. </li>
+                <li> Through altering these coordinates the texture appears to move across the surface even though the object itself remains static. </li>
+                <li> For the scrolling mechanic the shader uses a Time node to create a continuously changing value. The value of the time node is multiplied by a speed factor and added to the UV coordinates. </li>
+                <li> The updated UV coordinates then shift the sampled texture over the object's vertices, giving the appearance of motion.</li>
+
+            </ol>
+
+
             <h3>Materials</h3>
             <img src="images/portfolio/materialsexample.png" alt="Materials Example" class="section-image" />
             <p>In addition to the custom shaders, I created and maintained a library of materials based off of the <a href="https://assetstore.unity.com/packages/vfx/quibli-anime-shaders-and-tools-203178">Quibli: Anime Shaders and Tools</a> asset pack. In total 112 materials were created for use in the game (89 used for vegetation objects, 23 used for various other objects placed in the game world.) Quibli was chosen as the style best represented what our team agreed was the look we wanted for the project. From the baseline offering I trialed several different custom settings options before the final look for <strong>Mortimer: First Launch</strong> was approved by our Art Lead.</p>
-            <img src="images/portfolio/quibliexample.png" alt="Quibli Settings Example" class="section-image-small"/>
+            <img src="images/portfolio/quibliexample.png" alt="Quibli Settings Example" class="section-image-small" />
             <p>The end result was a hand-drawn, cartoon look with a hint of anime influence via flat shading and clearly defined outlines for the edges of static objects, while objects in motion such as leaves, grass and smaller ground vegetation retained the flat shading but abandoned the outline in favor of blending in with their surroundings. A key consideration was ensuring that the materials and settings used would respond well to shadows and the specific lighting used in the scenes, this required several iterations in order to get it right.</p>
-            <img src="images/portfolio/materialcloseup.png" alt="Material Close Up" class="section-image"/>
+            <img src="images/portfolio/materialcloseup.png" alt="Material Close Up" class="section-image" />
+            <p>Above is a closer look of the materials in game.</p>
         </section>
 
         <section>
@@ -144,6 +175,10 @@
                 <li><strong>Soda Bottle Drop</strong>: A smoke puff which occurs when Mortimer drops a bag of soda bottles off a conveyor belt, reinforcing cause-and-effect mechanics.</li>
                 <li><strong>Water Splash</strong>: A cartoon style splash effect with ripples at impact points, triggered when Mortimer jumps or falls into water.</li>
             </ul>
+            <video class="section-video" autoplay loop muted>
+                <source src="images/portfolio/ParticleSystem.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> <br />
         </section>
 
         <section>
@@ -168,6 +203,7 @@
                 <li><strong>Color Grading</strong>: To harmonize the overall color palette and enhance the sunset-inspired aesthetic.</li>
             </ul>
             <img src="images/portfolio/postprocessingstack.png" alt="Post Processing Stack" class="section-image-small" />
+            <p>Above is an image of the Post Processing stack as it appears in project.</p>
         </section>
 
         <section>
@@ -192,7 +228,7 @@
             <p>
                 My work on <strong>Mortimer: First Launch</strong> involved extensive optimization and technical art responsibilities to ensure the game maintained a balance between visual fidelity and performance. I focused heavily on baking and refining occlusion culling maps, modifying Levels of Detail (LoDs) to achieve optimal rendering, and adjusting the number of vegetation items spawned in the scene to provide high-quality visuals without compromising performance. Additionally, I handled the implementation of all assets, verifying their proper integration into the game world, and reporting bugs to the QA Lead or respective team members when issues arose.
             </p>
-            <img src="images/portfolio/vegetationspawnersettings.png" alt="Vegetation Spawner Settings" class="section-image-small" /> 
+            <img src="images/portfolio/vegetationspawnersettings.png" alt="Vegetation Spawner Settings" class="section-image-small" />
             <img src="images/portfolio/lodsettings.png" alt="LoD Settings" class="section-image-small" />
             <img src="images/portfolio/occlusioncullingsettings.png" alt="Occlusion Culling Settings" class="section-image-small" />
             <br /><br />
@@ -209,6 +245,7 @@
                 An additional issue arose in the Hatbill Park campground, where severe FPS drops occurred, even when viewed from a distance. After thorough investigation, I discovered that a 3D chain-link and barbed wire fence model created by our Art Lead was the cause. Disabling the barbed wire portion of the model resolved the issue, allowing me to deliver detailed bug reports and findings to the artist. Through collaboration, the model was reworked, and the problem was permanently resolved.
             </p>
             <img src="images/portfolio/problemfence.png" alt="Problem Fence with Object Highlighted" class="section-image" />
+            <p>The fence model in question, with the problematic barbed wire section highlighted.</p>
         </section>
 
         <!-- Second Most Recent Project -->
