@@ -45,7 +45,8 @@
             <header class="major">
                 <h2>
                     Portfolio
-                </h2>
+                </h2> <br />
+                <h3>This page contains in-depth analysis of my work on each project listed. For a quicker look at my work, head to <a href="demoreels.html">Demo Reels</a>.</h3>
             </header>
         </section>
 
@@ -96,6 +97,25 @@
             <p>The water shader selected for use in the game is a modified version of <a href="https://staggart.xyz/">Staggart Creations</a>' <a href="https://assetstore.unity.com/packages/vfx/shaders/stylized-water-2-170386">Stylized Water 2</a> shader asset. This asset is highly customizable, comes with a host of built-in features and also supports third party integrations with several other popular ready made assets. (See documentation <a href="https://staggart.xyz/unity/stylized-water-2/sws-2-docs/?section=stylized-water-2">here</a>)</p>
 
             <p>Using this asset as a base, I set up a material that would mimick swampy water and then worked through several iterations of art style, visuals and overall design for the look of the water. This process was aided by gathering feedback from my team members as well as getting impressions from individuals outside of the project. The water in our project was further enhanced by adding on functionality for enhanced dynamic effects - underwater rendering, normal displacement for simulating waves and ripples, and splash functionality which would respond to the character or objects dropped into the water, passing the information into the GPU buffer to be read by the shader for further normal displacement and realism.</p>
+
+            <h3>Outline Shader</h3>
+            <img src="images/portfolio/outlineshader.png" alt="Outline Shader" class="section-image" />
+
+            <h3>Fresnel Glow Shader</h3>
+            <img src="images/portfolio/fresnelglowshader.png" alt="Fresnel Glow Shader" class="section-image" />
+
+            <h3>Human Flipbook Shader</h3>
+            <img src="images/portfolio/humanflipbookshader.png" alt="Human Flipbook Shader" class="section-image" />
+
+            <h3>Object Shine Shader</h3>
+            <img src="images/portfolio/objectshineshader.png" alt="Object Shine Shader" class="section-image" />
+
+            <h3>Materials</h3>
+            <img src="images/portfolio/materialsexample.png" alt="Materials Example" class="section-image" />
+            <p>In addition to the custom shaders, I created and maintained a library of materials based off of the <a href="https://assetstore.unity.com/packages/vfx/quibli-anime-shaders-and-tools-203178">Quibli: Anime Shaders and Tools</a> asset pack. In total 112 materials were created for use in the game (89 used for vegetation objects, 23 used for various other objects placed in the game world.) Quibli was chosen as the style best represented what our team agreed was the look we wanted for the project. From the baseline offering I trialed several different custom settings options before the final look for <strong>Mortimer: First Launch</strong> was approved by our Art Lead.</p>
+            <img src="images/portfolio/quibliexample.png" alt="Quibli Settings Example" class="section-image-small"/>
+            <p>The end result was a hand-drawn, cartoon look with a hint of anime influence via flat shading and clearly defined outlines for the edges of static objects, while objects in motion such as leaves, grass and smaller ground vegetation retained the flat shading but abandoned the outline in favor of blending in with their surroundings. A key consideration was ensuring that the materials and settings used would respond well to shadows and the specific lighting used in the scenes, this required several iterations in order to get it right.</p>
+            <img src="images/portfolio/materialcloseup.png" alt="Material Close Up" class="section-image"/>
         </section>
 
         <section>
@@ -128,15 +148,15 @@
 
         <section>
             <h2>Lighting and Post-Processing</h2>
-            <img src="placeholder4.jpg" alt="Lighting Placeholder" class="section-image" />
+            <img src="images/portfolio/lightingandpostprocessing.png" alt="Lighting and Post Processing" class="section-image" />
             <p>
-                In <strong>Mortimer: First Launch</strong>, I designed the lighting to mimic the ambiance of a summer sunset. Using a directional light positioned as a setting sun in the west (negative X rotation), I shifted the color palette towards soft pastel tones of orange and pink. This approach ensured the lighting felt natural and believable while complementing the vibrant colors in the scene without overwhelming them. Shadows were carefully adjusted to balance the moody sunset aesthetic with the practical need for visibility, further offset by a secondary directional light set to low intensity pointed in opposition to the main directional light, enhancing the player's experience.
+                I designed the lighting to mimic a summer sunset. Using a directional light positioned as the sun setting  in the west (negative X rotation), I shifted the color palette towards more soft pastel tones of orange and pink. This approach ensured the lighting felt natural and believable while complementing the vibrant colors in the scene without overwhelming them. Shadows were carefully adjusted to balance the moody sunset aesthetic with the practical need for visibility, further offset by a secondary directional light set to low intensity pointed in opposition to the main directional light, to fake light reflection from the surface onto the underside of vegetation.
             </p>
             <p>
                 For performance and flexibility, I opted for dynamic, real-time lighting instead of baked lighting. This decision reduced the need for time-consuming GPU lightmap bakes during development and allowed for potential future implementation of a day/night cycle without additional rework.
             </p>
             <p>
-                Post-processing was implemented through a global volume, leveraging advanced techniques to further enhance the visual fidelity of the game. The following effects were applied:
+                Post-processing was implemented through a global volume, the following effects were applied:
             </p>
             <ul>
                 <li><strong>Bloom</strong>: To create a subtle glow around brighter areas and emphasize highlights.</li>
@@ -147,33 +167,37 @@
                 <li><strong>Channel Mixer</strong>: For advanced color adjustments and balancing.</li>
                 <li><strong>Color Grading</strong>: To harmonize the overall color palette and enhance the sunset-inspired aesthetic.</li>
             </ul>
+            <img src="images/portfolio/postprocessingstack.png" alt="Post Processing Stack" class="section-image-small" />
         </section>
 
         <section>
             <h2>Environmental Creation</h2>
-            <img src="placeholder5.jpg" alt="Environment Design Placeholder" class="section-image" />
+            <img src="images/portfolio/environmentalcreation.png" alt="Environment Creation" class="section-image" />
             <p>
                 The primary focus of the environmental design in <strong>Mortimer: First Launch</strong> was to establish a sense of believable realism. The goal was to create an environment that felt authentic enough for those familiar with the real Hatbill Park in Florida to recognize specific sections of the waterways, even with the limitations of vegetation detail and the addition of fantastical elements.
             </p>
             <p>
-                I created the terrain myself, using a modified satellite image of the Hatbill Park area provided by our lead designer. This terrain included waterways, three campgrounds, and a small township named Utopia, situated in the northwest corner. Using the satellite image as a guide, I traced the waterways with Unity's terrain tools to establish the basic structure. Feedback led to the inclusion of a prominent hill within Hatbill Park, designed as a viewpoint and landmark for player navigation.
+                I created the terrain using a modified satellite image of the Hatbill Park area provided by our lead designer. This terrain included waterways, three campgrounds, and a small township named Utopia, situated in the northwest corner. Using the satellite image as a guide, I traced the waterways with Unity's terrain tools to establish the basic structure. Feedback led to the addition of a hill within Hatbill Park, designed as a viewpoint and landmark for player navigation.
             </p>
+            <img src="images/portfolio/maplayoutimage.png" alt="Map Layout Created by Team Design Lead" class="section-image-small" />
+            <br /> <br />
             <p>
-                The workflow relied on importing the designer's image and transforming it into a semi-transparent material applied to a plane. This served as a tracing paper overlay, scaled to match the terrain at a 1:1 ratio. Unity's Terrain Tools asset pack was instrumental in sculpting, smoothing, and refining the terrain.
-            </p>
-            <p>
-                Vegetation was placed using <a href="https://staggart.xyz/">Staggart Creations</a>' Vegetation Spawner, while <a href="https://assetstore.unity.com/packages/tools/terrain/procedural-terrain-painter-188357">Terrain Painter</a> by Staggart Creations was used to create detailed terrain texture layers. Grass was generated using <a href="https://www.patreon.com/c/minionsart/posts">Minions Art</a>'s Computer Shader grass tool, ensuring a lush and visually consistent environment.
+                The workflow relied on importing the designer's image and transforming it into a semi-transparent material applied to a plane. This served as a tracing paper overlay, scaled to match the terrain at a 1:1 ratio. Unity's Terrain Tools asset pack was used for sculpting, smoothing, and refining the terrain. Vegetation was placed using <a href="https://staggart.xyz/">Staggart Creations</a>' Vegetation Spawner, while <a href="https://assetstore.unity.com/packages/tools/terrain/procedural-terrain-painter-188357">Terrain Painter</a> by Staggart Creations was used to create detailed terrain texture layers. Grass was generated using <a href="https://www.patreon.com/c/minionsart/posts">Minions Art</a>'s Computer Shader grass tool as a baseline, with the bulk of the effort spent on ensuring a visually consistent environment.
             </p>
         </section>
 
         <section>
             <h2>Technical Art and Optimization</h2>
-            <img src="placeholder6.jpg" alt="Technical Art Placeholder" class="section-image" />
+            <img src="images/portfolio/technicalartandoptimization.png" alt="Technical Art and Optimization" class="section-image" />
             <p>
                 My work on <strong>Mortimer: First Launch</strong> involved extensive optimization and technical art responsibilities to ensure the game maintained a balance between visual fidelity and performance. I focused heavily on baking and refining occlusion culling maps, modifying Levels of Detail (LoDs) to achieve optimal rendering, and adjusting the number of vegetation items spawned in the scene to provide high-quality visuals without compromising performance. Additionally, I handled the implementation of all assets, verifying their proper integration into the game world, and reporting bugs to the QA Lead or respective team members when issues arose.
             </p>
+            <img src="images/portfolio/vegetationspawnersettings.png" alt="Vegetation Spawner Settings" class="section-image-small" /> 
+            <img src="images/portfolio/lodsettings.png" alt="LoD Settings" class="section-image-small" />
+            <img src="images/portfolio/occlusioncullingsettings.png" alt="Occlusion Culling Settings" class="section-image-small" />
+            <br /><br />
             <p>
-                One major performance challenge occurred after vegetation was fully implemented on the completed terrain, causing significant FPS drops. To address this, I employed a multi-faceted optimization strategy:
+                One major performance challenge occurred after vegetation was fully implemented on the completed terrain, causing significant FPS drops. To address this, I employed what I referred to as a triage based optimization strategy:
             </p>
             <ul>
                 <li>Modified LoDs to balance rendering detail with performance.</li>
@@ -184,6 +208,7 @@
             <p>
                 An additional issue arose in the Hatbill Park campground, where severe FPS drops occurred, even when viewed from a distance. After thorough investigation, I discovered that a 3D chain-link and barbed wire fence model created by our Art Lead was the cause. Disabling the barbed wire portion of the model resolved the issue, allowing me to deliver detailed bug reports and findings to the artist. Through collaboration, the model was reworked, and the problem was permanently resolved.
             </p>
+            <img src="images/portfolio/problemfence.png" alt="Problem Fence with Object Highlighted" class="section-image" />
         </section>
 
         <!-- Second Most Recent Project -->
