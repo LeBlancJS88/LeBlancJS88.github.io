@@ -2153,12 +2153,21 @@ input[type="radio"] {
             border-radius: 100%;
             width: 100%;
         }
-
+/* Custom CSS for portfolio image styling by Jeremy*/
 .section-image {
     width: 50%;
     height: auto;
     margin: 10px 0;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section-image-small {
+    width: 15%;
+    height: auto;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .section-video {
@@ -2167,10 +2176,10 @@ input[type="radio"] {
     display: block;
     margin: 10px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* New CSS Rule for Portfolio Page */
+/* New CSS Rule for Portfolio Page by Jeremy */
 .portfolio-img {
     display: block;
     width: 100%;
