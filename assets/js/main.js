@@ -37,14 +37,29 @@
         }, 100);
     });
 
-    // Slideshow animation
+    // Slideshow animation by Jeremy
     document.addEventListener("DOMContentLoaded", () => {
-        let slides = document.querySelectorAll(".slideshow img");
+        let slides = document.querySelectorAll(".slideshow img, .slideshow video");
         let currentIndex = 0;
 
         function showSlide(index) {
             slides.forEach((slide, i) => {
-                slide.classList.toggle("active", i === index);
+                if (i === index) {
+                    slide.classList.add("active");
+                    slide.style.display = "block";
+
+                    if (slide.tagName === "VIDEO") {
+                        slide.play();
+                    }
+                } else {
+                    slide.classList.remove("active");
+                    slide.style.display = "none";
+
+                    if (slide.tagName === "VIDEO") {
+                        slide.pause(); 
+                        slide.currentTime = 0;
+                    }
+                }
             });
         }
 
@@ -53,11 +68,9 @@
             showSlide(currentIndex);
         }
 
-        // Set the initial slide to active
         showSlide(currentIndex);
 
-        // Change slide every 3 seconds
-        setInterval(nextSlide, 3000);
+        setInterval(nextSlide, 5000);
     });
 
     // Touch?
