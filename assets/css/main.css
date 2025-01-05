@@ -2075,16 +2075,29 @@ input[type="radio"] {
         display: inline; /* Ensures list items behave inline */
     }
 
-        #portfolio-intro nav ul li a {
-            color: #ffcc00; /* Gold color for links */
-            text-decoration: none; /* Removes underline */
-            font-weight: bold; /* Makes links bold */
-        }
+/* Light Mode Links */
+body:not(.dark-mode) #portfolio-intro nav ul li a {
+    color: #787878; /* Black color for links in light mode */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes links bold */
+}
 
-            #portfolio-intro nav ul li a:hover {
-                color: #f7f7f7; /* Changes color on hover */
-                text-decoration: underline; /* Optional hover effect */
-            }
+    body:not(.dark-mode) #portfolio-intro nav ul li a:hover {
+        color: #555555; /* Darker gray color on hover for light mode */
+        text-decoration: underline; /* Optional hover effect */
+    }
+
+/* Dark Mode Links */
+body.dark-mode #portfolio-intro nav ul li a {
+    color: #ffcc00; /* Gold color for links in dark mode */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes links bold */
+}
+
+    body.dark-mode #portfolio-intro nav ul li a:hover {
+        color: #f7f7f7; /* Light color on hover for dark mode */
+        text-decoration: underline; /* Optional hover effect */
+    }
 
 /*Custom CSS for Thumbnail Uniformity by Jeremy */
 
@@ -2708,7 +2721,8 @@ body.dark-mode {
 
     /* General Link Styling for Dark Mode */
     body.dark-mode a {
-        color: #ffcc00;/
+        color: #ffcc00;
+        /
     }
 
         body.dark-mode a:hover {
@@ -2785,7 +2799,7 @@ body.dark-mode {
         list-style: none;
         display: flex;
         justify-content: center;
-        gap: 1rem; 
+        gap: 1rem;
         padding: 0;
         margin: 0;
     }
@@ -2920,15 +2934,29 @@ body.dark-mode {
             text-align: center;
         }
 
+/* Return to Top Links */
 .return-to-top {
     display: inline;
     margin-top: 2rem;
     text-align: left;
-    color: #ffcc00;
     border: none;
 }
 
-    .return-to-top:hover {
+/* Light Mode Styles */
+body:not(.dark-mode) .return-to-top {
+    color: #787878;
+}
+
+    body:not(.dark-mode) .return-to-top:hover {
+        color: #555555;
+    }
+
+/* Dark Mode Styles */
+body.dark-mode .return-to-top {
+    color: #ffcc00;
+}
+
+    body.dark-mode .return-to-top:hover {
         color: #f7f7f7;
     }
 
@@ -3551,4 +3579,191 @@ body.is-touch .poptrox-popup .closer {
         margin-left: 0;
         padding-left: 0;
     }
+
+    /* Dark Mode Toggle for Mobile Only by Jeremy */
+    @media screen and (max-width: 768px) {
+        #theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            pointer-events: all;
+        }
+    }
+
+    /* Dark Mode Toggle for Mobile Only by Jeremy */
+    @media screen and (max-width: 768px) {
+        #theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            pointer-events: all;
+        }
+    }
+
+    /* Header Navigation Links for Mobile by Jeremy */
+    @media screen and (max-width: 768px) {
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+            nav ul li {
+                display: inline-block;
+                font-size: 0.9rem;
+            }
+
+            nav ul a {
+                text-decoration: none;
+                color: #ffffff;
+                transition: color 0.3s ease;
+            }
+
+                nav ul a:hover {
+                    color: #ffcc00;
+                }
+    }
+
+    /* Portfolio Links (Font Size) by Jeremy */
+    #portfolio-intro nav ul {
+        font-size: 0.8rem;
+    }
+
+    /* Responsive YouTube Embeds by Jeremy */
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Desktop Header Links Styling (Non-Mobile) by Jeremy */
+    #header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    #header .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    nav ul {
+        margin-top: 0;
+    }
+}
+
+#header nav ul li {
+    margin-bottom: 1rem;
+}
+
+#header nav ul a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+    #header nav ul a:hover {
+        color: #ffcc00;
+    }
+
+@media screen and (max-width: 768px) {
+    #header h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+        #header h1 strong {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        #header h1 span {
+            display: block;
+            font-size: 1rem;
+            text-align: center;
+        }
+}
+
+/* General Mobile Styles  by Jeremy */
+@media screen and (max-width: 768px) {
+    /* Responsive layout for resume section  by Jeremy */
+    #resume .row.gtr-uniform {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #resume .col-4, #resume .col-8 {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Adjust font sizes for readability on mobile  by Jeremy */
+    #resume h3, #resume h4 {
+        font-size: 1.1rem;
+    }
+
+    #resume p, #resume ul li {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* Center align all text in the contact information and skills sections  by Jeremy */
+    #resume .col-4 {
+        text-align: center;
+    }
+
+    /* Prevent text overflow in lists  by Jeremy */
+    #resume ul {
+        padding: 0;
+        margin: 0 auto;
+        list-style-position: inside;
+    }
+}
+
+/* Adjust Portfolio Links for Mobile  by Jeremy */
+@media screen and (max-width: 768px) {
+    #portfolio-intro nav ul {
+        font-size: 0.8rem;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+        #portfolio-intro nav ul li {
+            margin: 0.3rem 0;
+        }
+
+        #portfolio-intro nav ul a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+            #portfolio-intro nav ul a:hover {
+                color: #ffcc00;
+            }
+}
 }
