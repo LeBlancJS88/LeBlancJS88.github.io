@@ -3601,7 +3601,7 @@ body.is-touch .poptrox-popup .closer {
     }
 
     /* Dark Mode Toggle for Mobile Only by Jeremy */
-    @media screen and (max-width: 768px), (max-device-width: 1440px), (min-resolution: 192dpi) {
+    @media (max-width: 411px) and (orientation: portrait), (max-width: 823px) and (orientation: landscape) {
         #theme-toggle {
             position: absolute;
             top: 1rem;
@@ -3617,7 +3617,7 @@ body.is-touch .poptrox-popup .closer {
     }
 
     /* Dark Mode Toggle for Mobile Only by Jeremy */
-    @media screen and (max-width: 768px), (max-device-width: 1440px), (min-resolution: 192dpi) {
+    @media (max-width: 411px) and (orientation: portrait), (max-width: 823px) and (orientation: landscape) {
         #theme-toggle {
             position: absolute;
             top: 1rem;
@@ -3633,7 +3633,7 @@ body.is-touch .poptrox-popup .closer {
     }
 
     /* Header Navigation Links for Mobile by Jeremy */
-    @media screen and (max-width: 768px), (max-device-width: 1440px), (min-resolution: 192dpi) {
+    @media (max-width: 411px) and (orientation: portrait), (max-width: 823px) and (orientation: landscape) {
         nav ul {
             display: flex;
             justify-content: center;
@@ -3704,7 +3704,7 @@ body.is-touch .poptrox-popup .closer {
         color: #ffcc00;
     }
 
-@media screen and (max-width: 768px), (max-device-width: 1440px), (min-resolution: 192dpi) {
+@media (max-width: 411px) and (orientation: portrait), (max-width: 823px) and (orientation: landscape) {
     #header h1 {
         display: flex;
         flex-direction: column;
@@ -3725,7 +3725,7 @@ body.is-touch .poptrox-popup .closer {
 }
 
 /* General Mobile Styles  by Jeremy */
-@media screen and (max-width: 768px), (max-device-width: 1440px), (min-resolution: 192dpi) {
+@media (max-width: 411px) and (orientation: portrait), (max-width: 823px) and (orientation: landscape) {
     /* Responsive layout for resume section  by Jeremy */
     #resume .row.gtr-uniform {
         display: flex;
@@ -3762,7 +3762,7 @@ body.is-touch .poptrox-popup .closer {
 }
 
 /* Adjust Portfolio Links for Mobile  by Jeremy */
-@media screen and (max-width: 768px), (max-device-width: 1440px), (min-resolution: 192dpi) {
+@media (max-width: 411px) and (orientation: portrait), (max-width: 823px) and (orientation: landscape) {
     #portfolio-intro nav ul {
         font-size: 0.8rem;
         text-align: center;
