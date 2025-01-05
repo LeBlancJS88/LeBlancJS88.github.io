@@ -2673,21 +2673,21 @@ body.dark-mode {
         color: #ffcc00; /* Ensure all elements are gold */
     }
 
-        /* Hover Effects for Left Panel Links */
+        /* Hover Effects for All Links in Dark Mode */
+        body.dark-mode a:hover,
         body.dark-mode #header nav ul li a:hover,
         body.dark-mode #footer .icons a:hover {
-            color: #ffd700; /* Hover effect for links in the left panel */
+            color: #f7f7f7 !important; /* Light grey or white for hover effect */
         }
 
     /* Footer Copyright Section */
     body.dark-mode #footer .copyright {
-        color: #ffcc00; /* Match footer text to the rest of the links */
+        color: #ffcc00;
     }
 
-    /* Ensure <strong> inside #header h1 is styled correctly in dark mode */
     body.dark-mode #header h1 strong {
-        color: #ffcc66; /* Apply the same gold color to the strong tag */
-        font-weight: bold; /* Retain the bold style */
+        color: #ffcc66;
+        font-weight: bold;
     }
 
 /* Header */
