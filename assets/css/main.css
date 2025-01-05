@@ -2683,16 +2683,16 @@ body.dark-mode {
     body.dark-mode h2,
     body.dark-mode h3,
     body.dark-mode h4 {
-        color: #ffcc00 !important; /* Ensures the dark mode styles are not overridden */
+        color: #ffcc00 !important;
     }
 
     /* General Link Styling for Dark Mode */
     body.dark-mode a {
-        color: #ffcc00; /* Set all links to gold for consistency */
+        color: #ffcc00;/
     }
 
         body.dark-mode a:hover {
-            color: #ffd700; /* Slightly lighter gold on hover */
+            color: #ffd700;
         }
 
     /* Left Panel Text and Links */
@@ -2700,14 +2700,14 @@ body.dark-mode {
     body.dark-mode #header nav ul li a,
     body.dark-mode #footer .copyright li,
     body.dark-mode #footer .icons a {
-        color: #ffcc00; /* Ensure all elements are gold */
+        color: #ffcc00;
     }
 
         /* Hover Effects for All Links in Dark Mode */
         body.dark-mode a:hover,
         body.dark-mode #header nav ul li a:hover,
         body.dark-mode #footer .icons a:hover {
-            color: #f7f7f7 !important; /* Light grey or white for hover effect */
+            color: #f7f7f7 !important;
         }
 
     /* Footer Copyright Section */
@@ -2730,6 +2730,57 @@ body.dark-mode {
         color: #ffcc66;
         font-weight: bold;
     }
+
+    /* General Dark Mode Styling for <hr> */
+    body.dark-mode hr {
+        border: none;
+        border-bottom: solid 2px #ffcc00;
+        margin: 2em 0;
+    }
+
+    /* Apply to All Sections with an ID in Dark Mode */
+    body.dark-mode section[id] {
+        border-top: solid 2px #ffcc00 !important;
+        padding: 1em 0;
+        margin: 2em 0;
+    }
+
+    /* Remove Top Border for #portfolio-intro in Dark Mode */
+    body.dark-mode #portfolio-intro {
+        border-top: none !important;
+    }
+
+    body.dark-mode #one {
+        border-top: none !important;
+    }
+
+    body.dark-mode section {
+        border-top: solid 2px #ffcc00 !important;
+        padding: 1em 0;
+        margin: 2em 0;
+    }
+
+    /* Horizontal Navigation Fix */
+    body.dark-mode #portfolio-intro nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem; 
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Styling for buttons in dark mode */
+    body.dark-mode .button {
+        border-color: #ffcc00; /* Matching border */
+        color: #ffffff !important; /* Black text */
+    }
+
+        body.dark-mode .button:hover {
+            background-color: #f7f7f7; /* Lighter hover background */
+            border-color: #ffcc00; /* Matching hover border */
+            color: #000000 !important; /* Black text */
+        }
 
 /* Header */
 
