@@ -2648,6 +2648,47 @@ body.dark-mode {
         color: #fff;
     }
 
+    /* Dark Mode Headings */
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4 {
+        color: #ffcc00 !important; /* Ensures the dark mode styles are not overridden */
+    }
+
+    /* General Link Styling for Dark Mode */
+    body.dark-mode a {
+        color: #ffcc00; /* Set all links to gold for consistency */
+    }
+
+        body.dark-mode a:hover {
+            color: #ffd700; /* Slightly lighter gold on hover */
+        }
+
+    /* Left Panel Text and Links */
+    body.dark-mode #header h1,
+    body.dark-mode #header nav ul li a,
+    body.dark-mode #footer .copyright li,
+    body.dark-mode #footer .icons a {
+        color: #ffcc00; /* Ensure all elements are gold */
+    }
+
+        /* Hover Effects for Left Panel Links */
+        body.dark-mode #header nav ul li a:hover,
+        body.dark-mode #footer .icons a:hover {
+            color: #ffd700; /* Hover effect for links in the left panel */
+        }
+
+    /* Footer Copyright Section */
+    body.dark-mode #footer .copyright {
+        color: #ffcc00; /* Match footer text to the rest of the links */
+    }
+
+    /* Ensure <strong> inside #header h1 is styled correctly in dark mode */
+    body.dark-mode #header h1 strong {
+        color: #ffcc66; /* Apply the same gold color to the strong tag */
+        font-weight: bold; /* Retain the bold style */
+    }
 
 /* Header */
 
