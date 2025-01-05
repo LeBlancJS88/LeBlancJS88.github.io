@@ -2772,14 +2772,34 @@ body.dark-mode {
 
     /* Styling for buttons in dark mode */
     body.dark-mode .button {
-        border-color: #ffcc00; /* Matching border */
-        color: #ffffff !important; /* Black text */
+        border-color: #ffcc00;
+        color: #ffffff !important;
     }
 
         body.dark-mode .button:hover {
-            background-color: #f7f7f7; /* Lighter hover background */
-            border-color: #ffcc00; /* Matching hover border */
-            color: #000000 !important; /* Black text */
+            background-color: #f7f7f7;
+            border-color: #ffcc00;
+            color: #000000 !important;
+        }
+
+    /* Styling for buttons in the #three section in dark mode */
+    body.dark-mode #three input[type="submit"] {
+        background-color: transparent;
+        border: solid 2px #ffcc00;
+        color: #ffffff !important;
+        padding: 0.625em 1.25em;
+        font-size: 1.3rem;
+        line-height: 1.75;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: inline-block;
+    }
+
+        /* Hover effect for buttons in the #three section in dark mode */
+        body.dark-mode #three input[type="submit"]:hover {
+            background-color: #ffffff;
+            color: #000000 !important;
+            border-color: #ffcc00;
         }
 
 /* Header */
