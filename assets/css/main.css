@@ -105,7 +105,7 @@ body {
     }
 
 body, input, select, textarea {
-    color: #000000;
+    color: #787878;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 16pt;
     font-weight: 400;
@@ -118,7 +118,7 @@ a {
     -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     border-bottom: none;
-    color: #49bf9d;
+    color: #787878;
     text-decoration: none;
 }
 
@@ -201,9 +201,16 @@ hr {
     margin: 2em 0;
 }
 
-    hr.major {
-        margin: 3em 0;
-    }
+#header .inner hr {
+    border: 0; 
+    border-top: 1px solid #686868;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+hr.major {
+    margin: 3em 0;
+}
 
 blockquote {
     border-left: solid 6px #efefef;
@@ -2063,40 +2070,40 @@ input[type="radio"] {
 
 /* Portfolio Intro Navigation Links by Jeremy */
 #portfolio-intro nav ul {
-    list-style: none; /* Removes dots */
-    display: flex; /* Aligns items horizontally */
-    justify-content: center; /* Centers the navigation links */
-    gap: 1rem; /* Adds space between links */
-    padding: 0; /* Removes extra padding */
-    margin: 0; /* Adjusts margin */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
     #portfolio-intro nav ul li {
-        display: inline; /* Ensures list items behave inline */
+        display: inline;
     }
 
 /* Light Mode Links */
 body:not(.dark-mode) #portfolio-intro nav ul li a {
-    color: #787878; /* Black color for links in light mode */
-    text-decoration: none; /* Removes underline */
-    font-weight: bold; /* Makes links bold */
+    color: #787878;
+    text-decoration: none;
+    font-weight: bold;
 }
 
     body:not(.dark-mode) #portfolio-intro nav ul li a:hover {
-        color: #555555; /* Darker gray color on hover for light mode */
-        text-decoration: underline; /* Optional hover effect */
+        color: #555555;
+        text-decoration: underline;
     }
 
 /* Dark Mode Links */
 body.dark-mode #portfolio-intro nav ul li a {
-    color: #ffcc00; /* Gold color for links in dark mode */
-    text-decoration: none; /* Removes underline */
-    font-weight: bold; /* Makes links bold */
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
 }
 
     body.dark-mode #portfolio-intro nav ul li a:hover {
-        color: #f7f7f7; /* Light color on hover for dark mode */
-        text-decoration: underline; /* Optional hover effect */
+        color: #f7f7f7;
+        text-decoration: underline;
     }
 
 /*Custom CSS for Thumbnail Uniformity by Jeremy */
@@ -2273,6 +2280,14 @@ ul {
                 padding-top: 0;
             }
 
+    ul ul {
+        margin-left: 2rem;
+        list-style-type: circle;
+    }
+
+        ul ul li {
+            font-size: 0.9rem;
+        }
 dl {
     margin: 0 0 2em 0;
 }
@@ -2679,22 +2694,22 @@ input[type="button"],
 
 /* Light Mode: Gold Sun */
 body:not(.dark-mode) .theme-icon i.fa-sun {
-    color: #ffcc00; /* Gold sun for light mode */
+    color: #ffcc00;
 }
 
 /* Light Mode: White Moon */
 body:not(.dark-mode) .theme-icon i.fa-moon {
-    color: #ffffff; /* White moon for light mode */
+    color: #ffffff;
 }
 
 /* Dark Mode: White Moon */
 body.dark-mode .theme-icon i.fa-moon {
-    color: #ffffff; /* White moon for dark mode */
+    color: #ffffff;
 }
 
 /* Dark Mode: Gold Sun */
 body.dark-mode .theme-icon i.fa-sun {
-    color: #ffcc00; /* Gold sun for dark mode */
+    color: #ffcc00;
 }
 
 /* Dark Mode Styles */
@@ -2890,16 +2905,21 @@ body.dark-mode {
 
     #header strong, #header b {
         color: #ffffff;
+        font-size: 1.35em;
+        font-style: normal;
+        line-height: 3em;
+        margin: 0;
     }
 
     #header h2, #header h3, #header h4, #header h5, #header h6 {
-        color: #ffffff;
+        color: #787878;
     }
 
     #header h1 {
         color: rgba(255, 255, 255, 0.5);
-        font-size: 1.35em;
-        line-height: 1.75em;
+        font-style: italic;
+        font-size: 1.15em;
+        line-height: 3em;
         margin: 0;
     }
 
@@ -2916,7 +2936,7 @@ body.dark-mode {
     }
 
         #header nav ul li a {
-            color: rgba(255, 255, 255, 0.85);
+            color: #787878;
             font-size: 1em;
             font-weight: bold;
             text-decoration: none;
