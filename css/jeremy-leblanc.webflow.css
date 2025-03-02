@@ -668,7 +668,9 @@ p {
 .portfolio-image {
   border: 1px solid var(--goldenrod);
   border-radius: 5px;
-  max-width: 50%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 84.937%;
 }
 
 .portfolio-image._10-width {
