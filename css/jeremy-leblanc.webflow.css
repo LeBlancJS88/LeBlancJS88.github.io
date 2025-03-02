@@ -779,11 +779,16 @@ p {
   }
 
   .hero-section.centered {
-    padding-top: 120px;
+    object-fit: fill;
+    flex-flow: column;
+    max-width: 100%;
+    padding-top: 110px;
     padding-bottom: 0;
+    display: flex;
   }
 
   .hero-heading {
+    text-align: center;
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 32px;
@@ -795,8 +800,31 @@ p {
     font-size: 14px;
   }
 
+  .hollow-button {
+    border-color: var(--goldenrod);
+    color: var(--white-smoke);
+    background-color: #0000;
+  }
+
+  .hollow-button:hover {
+    border-color: var(--goldenrod);
+    background-color: var(--goldenrod);
+    color: var(--black);
+    -webkit-text-stroke-color: var(--goldenrod);
+    font-weight: 400;
+  }
+
   .form-field.text-area {
     display: block;
+  }
+
+  .footer {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
   }
 
   .grid-image {
@@ -809,14 +837,36 @@ p {
   }
 
   .container {
-    margin-top: -121px;
-    margin-bottom: -75px;
+    flex-flow: column;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin-top: -110px;
+    margin-bottom: -5px;
     padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
     position: relative;
   }
 
   .background-image {
     padding-top: 150px;
+  }
+
+  .socials-container {
+    text-align: center;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0%;
+  }
+
+  .div-block-6 {
+    text-align: center;
+  }
+
+  .button-2 {
+    background-color: #0000;
   }
 }
 
