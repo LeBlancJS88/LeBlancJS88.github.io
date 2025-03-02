@@ -303,10 +303,11 @@ p {
 }
 
 .hollow-button {
-  color: var(--goldenrod);
+  border: 1px solid var(--goldenrod);
+  color: var(--white-smoke);
   letter-spacing: 2px;
   text-transform: uppercase;
-  border: 1px solid #fff;
+  background-color: #0000;
   border-radius: 4px;
   margin-left: 10px;
   margin-right: 10px;
@@ -319,8 +320,10 @@ p {
 }
 
 .hollow-button:hover {
-  color: #2e9dff;
-  border-color: #2e9dff;
+  border-color: var(--goldenrod);
+  background-color: var(--goldenrod);
+  color: #000;
+  font-weight: 400;
 }
 
 .hollow-button.all-caps {
