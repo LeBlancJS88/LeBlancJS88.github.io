@@ -748,6 +748,15 @@ p {
     font-size: 12.5px;
   }
 
+  .footer {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+  }
+
   .grid-image {
     width: 50%;
     padding: 15px;
@@ -757,8 +766,23 @@ p {
     padding-top: 40px;
   }
 
+  .socials-container {
+    text-align: left;
+    flex-flow: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
   .icon {
     color: var(--goldenrod);
+  }
+
+  .code-block {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -883,6 +907,14 @@ p {
     padding-right: 0%;
   }
 
+  .code-block {
+    min-width: 50%;
+    max-width: 100%;
+    min-height: 100%;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   .div-block-6 {
     text-align: center;
   }
@@ -952,6 +984,15 @@ p {
 
   .icon {
     color: var(--goldenrod);
+  }
+
+  .code-block {
+    min-width: 50%;
+    max-width: 100%;
+    min-height: auto;
+    max-height: 25%;
+    font-size: 8px;
+    line-height: 10px;
   }
 }
 
