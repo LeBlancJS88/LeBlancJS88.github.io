@@ -668,12 +668,13 @@ p {
 .portfolio-image {
   border: 1px solid var(--goldenrod);
   border-radius: 5px;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 84.937%;
+  min-width: 75%;
+  max-width: 80%;
+  min-height: 80%;
 }
 
 .portfolio-image._10-width {
+  min-width: 10%;
   max-width: 10%;
 }
 
