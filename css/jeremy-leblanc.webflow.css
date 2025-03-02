@@ -766,6 +766,22 @@ p {
     font-size: 12px;
   }
 
+  .navigation-link {
+    color: var(--white-smoke);
+  }
+
+  .navigation-bar {
+    background-color: #192324;
+  }
+
+  .hamburger-button {
+    color: var(--goldenrod);
+  }
+
+  .navigation-menu {
+    background-color: #192324;
+  }
+
   .brand-text {
     font-size: 16px;
   }
