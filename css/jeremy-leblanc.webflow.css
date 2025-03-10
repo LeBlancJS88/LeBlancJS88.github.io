@@ -908,6 +908,24 @@ p {
 
   .resume-container-sub {
     flex-flow: column;
+    max-width: 100%;
+  }
+
+  .space-div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .resume-div-block.left-aligned {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0%;
+  }
+
+  .resume-div-block.right-aligned {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0%;
   }
 }
 
@@ -1050,6 +1068,24 @@ p {
 
   .resume-container-sub {
     flex-flow: column;
+    max-width: 100%;
+  }
+
+  .space-div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .resume-div-block.left-aligned {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0%;
+  }
+
+  .resume-div-block.right-aligned {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0%;
   }
 }
 
@@ -1126,6 +1162,24 @@ p {
 
   .resume-container-sub {
     flex-flow: column;
+    max-width: 100%;
+  }
+
+  .space-div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .resume-div-block.left-aligned {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0%;
+  }
+
+  .resume-div-block.right-aligned {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0%;
   }
 }
 
