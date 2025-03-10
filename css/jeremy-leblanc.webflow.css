@@ -209,6 +209,7 @@ p {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0%;
   font-family: Open Sans, sans-serif;
   font-size: 25px;
   font-weight: 300;
@@ -218,6 +219,7 @@ p {
 .brand-link {
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 5%;
 }
 
 .brand-link.w--current {
@@ -767,12 +769,15 @@ p {
 
 .resume-contact-list {
   text-align: left;
+  font-weight: 300;
   list-style-type: none;
 }
 
 .space-div {
-  min-width: 30%;
-  max-width: 30%;
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
 .italic-text {
@@ -802,13 +807,17 @@ p {
 }
 
 .div-block-7 {
-  min-width: 50%;
-  max-width: 50%;
+  min-width: 60%;
+  max-width: 60%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
 .div-block-8 {
-  min-width: 20%;
-  max-width: 20%;
+  min-width: 30%;
+  max-width: 30%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
 @media screen and (max-width: 991px) {
