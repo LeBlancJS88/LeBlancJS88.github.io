@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Mortimer: First Launch - Jeremy LeBlanc</title>
+
+    <meta
+        name="description"
+        content="Mortimer: First Launch case study by Jeremy LeBlanc — technical art, VFX, shaders, environment work and optimization in Unity."
+    >
+
+
+    <!-- ===================================================
+         FONT
+         =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ===================================================
+         STYLES
+         =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/site.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/pages.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/project-slides.css"
+    >
+
+    <!-- SITE META START -->
+
+    <link
+        rel="icon"
+        href="../assets/images/ui/favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="canonical"
+        href="https://leblancjs88.github.io/projects/mortimer.html"
+    >
+
+    <meta
+        name="theme-color"
+        content="#071018"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:site_name"
+        content="Jeremy LeBlanc"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_US"
+    >
+
+    <meta
+        property="og:title"
+        content="Mortimer: First Launch - Jeremy LeBlanc"
+    >
+
+    <meta
+        property="og:description"
+        content="Technical art, VFX, shaders, environment work and optimization by Jeremy LeBlanc for Mortimer: First Launch."
+    >
+
+    <meta
+        property="og:url"
+        content="https://leblancjs88.github.io/projects/mortimer.html"
+    >
+
+    <meta
+        property="og:image"
+        content="https://leblancjs88.github.io/assets/images/projects/mortimer/featured.jpg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Mortimer: First Launch, featuring the raccoon protagonist on a rocket."
+    >
+
+
+    <!-- Twitter / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Mortimer: First Launch - Jeremy LeBlanc"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Technical art, VFX, shaders, environment work and optimization by Jeremy LeBlanc for Mortimer: First Launch."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://leblancjs88.github.io/assets/images/projects/mortimer/featured.jpg"
+    >
+
+    <!-- SITE META END -->
+
+</head>
+
+
+<body>
+
+<div class="site">
+
+
+    <!-- ===================================================
+         HEADER
+         =================================================== -->
+
+    <header class="site-header">
+
+        <div class="container site-header__inner">
+
+            <a
+                class="site-brand"
+                href="../index.html"
+                aria-label="Jeremy LeBlanc home"
+            >
+                Jeremy
+                <span class="site-brand__accent">
+                    LeBlanc
+                </span>
+            </a>
+
+
+            <nav
+                class="site-nav"
+                aria-label="Primary navigation"
+            >
+
+                <a
+                    class="site-nav__link"
+                    href="../index.html"
+                >
+                    Home
+                </a>
+
+                <a
+                    class="site-nav__link is-active"
+                    href="../portfolio.html"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    class="site-nav__link"
+                    href="../resume.html"
+                >
+                    Resume
+                </a>
+
+                <a
+                    class="site-nav__link"
+                    href="../contact.html"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <button
+                class="mobile-nav-toggle"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+
+                <span class="mobile-nav-toggle__icon">
+                    <span></span>
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ===================================================
+         MAIN
+         =================================================== -->
+
+    <main>
+
+
+        <!-- ===============================================
+             PROJECT HERO
+             =============================================== -->
+
+        <section class="section project-hero">
+
+            <div class="container">
+
+
+                <a
+                    class="project-hero__back"
+                    href="../portfolio.html"
+                >
+                    ← Back to Portfolio
+                </a>
+
+
+                <div class="project-hero__media">
+
+
+                    <img
+                        src="../assets/images/projects/mortimer/featured.jpg"
+                        alt="Mortimer: First Launch"
+                    >
+
+
+                    <div class="project-hero__content">
+
+
+                        <div class="project-label">
+                            Technical Art & VFX
+                        </div>
+
+
+                        <h1 class="heading-page project-hero__title">
+                            Mortimer: First Launch
+                        </h1>
+
+
+                        <p class="project-hero__subtitle">
+                            VFX · Shaders · Environment · Optimization
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =======================================
+                     PROJECT DETAILS
+                     ======================================= -->
+
+                <div class="project-details">
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Role
+                        </div>
+
+                        <div class="project-details__value">
+                            Product Owner / Technical Art & VFX Lead
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Engine
+                        </div>
+
+                        <div class="project-details__value">
+                            Unity 2022.3 LTS · URP
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Team
+                        </div>
+
+                        <div class="project-details__value">
+                            5 Developers
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Development
+                        </div>
+
+                        <div class="project-details__value">
+                            3 Months
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================================
+             PROJECT SLIDE DECK
+             =============================================== -->
+
+        <section class="project-deck">
+
+            <div class="container">
+
+
+                <!-- =======================================
+                     UTILITY BAR
+                     ======================================= -->
+
+                <div class="project-deck__utility">
+
+                    <div class="project-deck__utility-info">
+
+                        <div class="project-label">
+                            Built With
+                        </div>
+
+
+                        <div class="tag-list">
+
+                            <span class="tag">
+                                Unity
+                            </span>
+
+                            <span class="tag">
+                                URP
+                            </span>
+
+                            <span class="tag">
+                                VFX Graph
+                            </span>
+
+                            <span class="tag">
+                                Shader Graph
+                            </span>
+
+                            <span class="tag">
+                                C#
+                            </span>
+
+                            <span class="tag">
+                                Terrain Tools
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        class="button button--secondary"
+                        href="https://store.steampowered.com/app/3288660/Mortimer_First_Launch/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View on Steam
+                    </a>
+
+                </div>
+
+
+
+                <!-- =======================================
+                     COMPLETE SLIDE DECK
+                     ======================================= -->
+
+                <div data-project-deck>
+
+
+                    <!-- ===================================
+                         NAVIGATION
+                         =================================== -->
+
+                    <div class="project-deck__navigation">
+
+
+                        <div
+                            class="project-deck__tabs"
+                            role="tablist"
+                            aria-label="Mortimer case study sections"
+                        >
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="overview"
+                            >
+                                Overview
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="shaders"
+                            >
+                                Shaders
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="vfx"
+                            >
+                                VFX
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="environment"
+                            >
+                                Environment
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="optimization"
+                            >
+                                Optimization
+                            </button>
+
+
+                        </div>
+
+
+
+                        <div class="project-deck__counter">
+
+                            <span data-project-slide-current>
+                                1
+                            </span>
+
+                            /
+
+                            <span data-project-slide-total>
+                                5
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ===================================
+                         VIEWPORT
+                         =================================== -->
+
+                    <div class="project-deck__viewport">
+
+
+                        <!-- ===============================
+                             OVERVIEW
+                             =============================== -->
+
+                        <article
+                            id="overview"
+                            class="project-slide"
+                            data-project-slide
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Overview
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    A stylized stealth adventure built in Unity
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        Mortimer: First Launch is a 3D
+                                        adventure puzzle and stealth game
+                                        in which players guide a raccoon
+                                        named Mortimer on his attempt to
+                                        build a rocket and reach the moon.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        The game was developed by a team
+                                        of five student developers over
+                                        three months as part of JAMK
+                                        University of Applied Sciences'
+                                        Ticorporate Demo Lab.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        I served as Product Owner while
+                                        also leading much of the project's
+                                        technical-art and VFX work.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="project-slide__cards">
+
+
+                                <article class="project-slide__card">
+
+                                    <h3 class="project-slide__card-title">
+                                        Product Ownership
+                                    </h3>
+
+                                    <p class="project-slide__card-copy">
+
+                                        Vision, roadmap, backlog and
+                                        GitHub Projects workflow across
+                                        two-week sprints.
+
+                                    </p>
+
+                                </article>
+
+
+
+                                <article class="project-slide__card">
+
+                                    <h3 class="project-slide__card-title">
+                                        Shaders & Materials
+                                    </h3>
+
+                                    <p class="project-slide__card-copy">
+
+                                        Custom Shader Graph solutions and
+                                        management of the project's
+                                        material library.
+
+                                    </p>
+
+                                </article>
+
+
+
+                                <article class="project-slide__card">
+
+                                    <h3 class="project-slide__card-title">
+                                        VFX & Presentation
+                                    </h3>
+
+                                    <p class="project-slide__card-copy">
+
+                                        Gameplay effects, environmental
+                                        effects, lighting and
+                                        post-processing.
+
+                                    </p>
+
+                                </article>
+
+
+
+                                <article class="project-slide__card">
+
+                                    <h3 class="project-slide__card-title">
+                                        Optimization
+                                    </h3>
+
+                                    <p class="project-slide__card-copy">
+
+                                        Asset integration, LODs,
+                                        vegetation, occlusion and
+                                        performance investigation.
+
+                                    </p>
+
+                                </article>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             SHADERS
+                             =============================== -->
+
+                        <article
+                            id="shaders"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Shaders & Materials
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Building the game's stylized visual language
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        I developed four custom Shader
+                                        Graph solutions: an outline
+                                        shader, fresnel glow,
+                                        human-character flipbook shader
+                                        and animated object-shine shader.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        I also created and maintained 112
+                                        materials, including 89 vegetation
+                                        materials and 23 additional
+                                        environment materials.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        The project's water used a
+                                        customized Stylized Water 2 setup
+                                        with swamp-like rendering,
+                                        displacement, ripples and splash
+                                        interaction.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/mortimer/objectshineshader.png"
+                                    alt="Mortimer animated object shine Shader Graph"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             VFX
+                             =============================== -->
+
+                        <article
+                            id="vfx"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    VFX & Presentation
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Effects supporting the game's whimsical tone
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        I created ten distinct effects
+                                        using Unity's VFX Graph and
+                                        Particle System.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Four higher-impact effects used
+                                        VFX Graph, while six simpler
+                                        effects used the Particle System
+                                        where the extra complexity was
+                                        unnecessary.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        I also developed the project's
+                                        summer-sunset lighting and
+                                        post-processing, balancing warm
+                                        oranges and pinks against gameplay
+                                        readability.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="project-slide__visual-grid">
+
+
+                                <figure class="project-slide__visual">
+
+                                    <img
+                                        class="project-slide__image"
+                                        src="../assets/images/projects/mortimer/vfxgraph.png"
+                                        alt="Unity VFX Graph work from Mortimer"
+                                    >
+
+                                </figure>
+
+
+                                <figure class="project-slide__visual">
+
+                                    <img
+                                        class="project-slide__image project-slide__image--cover"
+                                        src="../assets/images/projects/mortimer/lightingandpostprocessing.jpg"
+                                        alt="Mortimer lighting and post-processing"
+                                    >
+
+                                </figure>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             ENVIRONMENT
+                             =============================== -->
+
+                        <article
+                            id="environment"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Environment
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Rebuilding Hatbill Park as a playable world
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        The environment was based on a
+                                        recognizable interpretation of the
+                                        real Hatbill Park area in Florida.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        A modified satellite reference was
+                                        converted into a semi-transparent
+                                        material and placed over the Unity
+                                        terrain at 1:1 scale so waterways
+                                        and major features could be
+                                        traced.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Unity Terrain Tools, vegetation
+                                        and terrain-painting workflows
+                                        were then used to build the
+                                        finished environment.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/mortimer/environmentalcreation.jpg"
+                                    alt="Mortimer environment creation in Unity"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             OPTIMIZATION
+                             =============================== -->
+
+                        <article
+                            id="optimization"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Technical Art & Optimization
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Preserving the look without sacrificing performance
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        As the environment became denser,
+                                        I refined occlusion culling, LODs
+                                        and vegetation density to balance
+                                        visual quality against rendering
+                                        cost.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        The environment was also divided
+                                        into smaller terrain chunks and
+                                        scenes that could be loaded
+                                        additively.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        One severe FPS issue was traced
+                                        to barbed-wire geometry on a
+                                        campground fence. Isolating the
+                                        geometry allowed the art asset to
+                                        be corrected.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="project-slide__visual-grid">
+
+
+                                <figure class="project-slide__visual">
+
+                                    <img
+                                        class="project-slide__image"
+                                        src="../assets/images/projects/mortimer/technicalartandoptimization.png"
+                                        alt="Mortimer technical art and optimization work"
+                                    >
+
+                                </figure>
+
+
+                                <figure class="project-slide__visual">
+
+                                    <img
+                                        class="project-slide__image project-slide__image--cover"
+                                        src="../assets/images/projects/mortimer/problemfence.jpg"
+                                        alt="Problematic barbed-wire geometry identified during optimization"
+                                    >
+
+                                </figure>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- ===================================
+                         CONTROLS
+                         =================================== -->
+
+                    <div class="project-deck__controls">
+
+
+                        <button
+                            class="project-deck__control"
+                            type="button"
+                            data-project-slide-previous
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M19 12H5M10 7L5 12L10 17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+
+                            Previous
+
+                        </button>
+
+
+
+                        <button
+                            class="project-deck__control"
+                            type="button"
+                            data-project-slide-next
+                        >
+
+                            Next
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M5 12H19M14 7L19 12L14 17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container site-footer__inner">
+
+            <div class="site-footer__copyright">
+                © Jeremy LeBlanc
+            </div>
+
+
+            <div class="site-footer__links">
+
+                <a
+                    class="site-footer__link"
+                    href="../portfolio.html"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    class="site-footer__link"
+                    href="../resume.html"
+                >
+                    Resume
+                </a>
+
+                <a
+                    class="site-footer__link"
+                    href="../contact.html"
+                >
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+<script src="../assets/js/site.js"></script>
+
+<script src="../assets/js/project-slides.js"></script>
+
+
+</body>
+
+</html>

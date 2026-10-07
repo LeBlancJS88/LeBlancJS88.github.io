@@ -1,0 +1,550 @@
+/* =========================================================
+   JEREMY LEBLANC PORTFOLIO
+   Global Site Foundation
+   ========================================================= */
+
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+   :root {
+
+    /* Core Colors */
+    --color-bg: #080d0f;
+    --color-bg-soft: #0b1114;
+    --color-surface: #0e1518;
+    --color-surface-raised: #131c20;
+
+    --color-text: #f2f3f3;
+    --color-text-muted: #a9b0b3;
+    --color-text-subtle: #737d82;
+
+    --color-accent: #ecaf32;
+    --color-accent-light: #f5c75b;
+    --color-accent-dark: #c98c16;
+
+    --color-border: rgba(255, 255, 255, 0.10);
+    --color-border-strong: rgba(255, 255, 255, 0.18);
+
+    --color-overlay: rgba(3, 7, 9, 0.70);
+    --color-overlay-heavy: rgba(3, 7, 9, 0.88);
+
+
+    /* Typography */
+    --font-primary:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.375rem;
+    --font-size-xl: 1.75rem;
+    --font-size-2xl: 2.25rem;
+    --font-size-3xl: 3rem;
+    --font-size-4xl: 4rem;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+
+    /* Layout */
+    --container-max: 1600px;
+
+    --page-padding-desktop: 5rem;
+    --page-padding-laptop: 3rem;
+    --page-padding-tablet: 2rem;
+    --page-padding-mobile: 1.25rem;
+
+
+    /* Spacing */
+    --space-1: 0.5rem;
+    --space-2: 0.75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 3rem;
+    --space-7: 4rem;
+    --space-8: 6rem;
+    --space-9: 8rem;
+
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 10px;
+
+
+    /* Shadows */
+    --shadow-soft:
+        0 8px 30px rgba(0, 0, 0, 0.20);
+
+    --shadow-medium:
+        0 16px 50px rgba(0, 0, 0, 0.32);
+
+    --shadow-accent:
+        0 0 32px rgba(236, 175, 50, 0.08);
+
+
+    /* Motion */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 400ms ease;
+}
+
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at top center,
+            rgba(30, 42, 47, 0.18),
+            transparent 42rem
+        ),
+        var(--color-bg);
+
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::selection {
+    background: rgba(236, 175, 50, 0.28);
+    color: var(--color-text);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: 4px;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
+
+.site {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(
+        calc(100% - (var(--page-padding-desktop) * 2)),
+        var(--container-max)
+    );
+
+    margin-inline: auto;
+}
+
+.section {
+    position: relative;
+    padding-block: var(--space-8);
+}
+
+.section--tight {
+    padding-block: var(--space-6);
+}
+
+.section--large {
+    padding-block: var(--space-9);
+}
+
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.heading-display {
+    max-width: 950px;
+
+    font-size: clamp(
+        3rem,
+        4.5vw,
+        5rem
+    );
+
+    font-weight: var(--font-weight-semibold);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.heading-page {
+    font-size: clamp(
+        2.75rem,
+        4vw,
+        4rem
+    );
+
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.heading-section {
+    font-size: clamp(
+        1.5rem,
+        2vw,
+        2rem
+    );
+
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+.heading-card {
+    font-size: clamp(
+        1.25rem,
+        1.5vw,
+        1.75rem
+    );
+
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.body-large {
+    max-width: 720px;
+
+    color: var(--color-text-muted);
+
+    font-size: clamp(
+        1.05rem,
+        1.25vw,
+        1.2rem
+    );
+
+    line-height: 1.7;
+}
+
+.body-copy {
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-subtle {
+    color: var(--color-text-subtle);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+
+
+/* =========================================================
+   EYEBROW / SMALL SECTION LABEL
+   ========================================================= */
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--color-accent);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+
+    width: 18px;
+    height: 1px;
+
+    background: var(--color-accent);
+}
+
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-4);
+
+    margin-bottom: var(--space-5);
+}
+
+.section-header__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.section-header__line {
+    width: 70px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--color-accent),
+            transparent
+        );
+}
+
+
+
+/* =========================================================
+   SURFACES
+   ========================================================= */
+
+.surface {
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.surface--raised {
+    background: var(--color-surface-raised);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-soft);
+}
+
+
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+.divider {
+    width: 100%;
+    height: 1px;
+
+    background: var(--color-border);
+}
+
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--color-accent);
+    color: #111;
+}
+
+
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+    border: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .container {
+        width: min(
+            calc(100% - (var(--page-padding-laptop) * 2)),
+            var(--container-max)
+        );
+    }
+
+    .section {
+        padding-block: var(--space-7);
+    }
+
+    .section--large {
+        padding-block: var(--space-8);
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+    .container {
+        width: min(
+            calc(100% - (var(--page-padding-tablet) * 2)),
+            var(--container-max)
+        );
+    }
+
+    .section-header {
+        align-items: flex-start;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+    .container {
+        width: min(
+            calc(100% - (var(--page-padding-mobile) * 2)),
+            var(--container-max)
+        );
+    }
+
+    .section {
+        padding-block: var(--space-6);
+    }
+
+    .section--large {
+        padding-block: var(--space-7);
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+    }
+
+    .section-header__line {
+        width: 42px;
+    }
+
+    .heading-display {
+        line-height: 1.02;
+    }
+
+}

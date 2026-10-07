@@ -1,0 +1,465 @@
+/* =========================================================
+   JEREMY LEBLANC PORTFOLIO
+   Resume Page
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+   .resume-hero {
+    padding-top: 7rem;
+    padding-bottom: 2.75rem;
+
+    border-bottom: 1px solid var(--color-border);
+
+    background:
+        radial-gradient(
+            circle at 72% 10%,
+            rgba(232, 168, 34, 0.08),
+            transparent 34%
+        ),
+        var(--color-bg);
+}
+
+.resume-hero__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: end;
+
+    gap: var(--space-6);
+}
+
+.resume-hero__title {
+    margin-top: var(--space-2);
+}
+
+.resume-hero__summary {
+    max-width: 760px;
+
+    margin-top: var(--space-3);
+}
+
+.resume-hero__actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+
+
+/* =========================================================
+   CONTACT STRIP
+   ========================================================= */
+
+.resume-contact {
+    padding-block: 1rem;
+
+    border-bottom: 1px solid var(--color-border);
+
+    background: var(--color-bg-soft);
+}
+
+.resume-contact__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.75rem 1.5rem;
+}
+
+.resume-contact__item {
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+}
+
+.resume-contact__item a {
+    color: inherit;
+
+    transition: color var(--transition-normal);
+}
+
+.resume-contact__item a:hover {
+    color: var(--color-accent-light);
+}
+
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.resume-page {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.resume-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
+
+    gap: clamp(3rem, 6vw, 6rem);
+
+    align-items: start;
+}
+
+.resume-main,
+.resume-sidebar {
+    min-width: 0;
+}
+
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.resume-section + .resume-section {
+    margin-top: 3.25rem;
+}
+
+.resume-section__heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.resume-section__line {
+    width: 72px;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        var(--color-accent),
+        transparent
+    );
+}
+
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.resume-entry {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+
+    gap: 1.5rem;
+
+    padding-block: 1.5rem;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.resume-entry:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.resume-entry__date {
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+
+    opacity: 0.82;
+}
+
+.resume-entry__role {
+    color: var(--color-text);
+
+    font-size: 1.15rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+.resume-entry__company {
+    margin-top: 0.25rem;
+
+    color: var(--color-accent-light);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.resume-entry__project-link {
+    transition:
+        color var(--transition-normal),
+        opacity var(--transition-normal);
+}
+
+.resume-entry__project-link:hover {
+    color: var(--color-accent);
+}
+
+.resume-entry__project-link--role {
+    color: inherit;
+}
+
+.resume-entry__project-link--role:hover {
+    color: var(--color-accent-light);
+}
+
+.resume-entry__description {
+    margin-top: 0.75rem;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+}
+
+.resume-entry__highlights {
+    display: grid;
+    gap: 0.45rem;
+
+    margin-top: 0.9rem;
+}
+
+.resume-entry__highlight {
+    position: relative;
+
+    padding-left: 1rem;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+.resume-entry__highlight::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0.7em;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: var(--color-accent);
+}
+
+
+
+/* =========================================================
+   SIDEBAR CARDS
+   ========================================================= */
+
+.resume-card {
+    padding: 1.4rem;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.resume-card + .resume-card {
+    margin-top: var(--space-3);
+}
+
+.resume-card__title {
+    margin-bottom: 1rem;
+
+    color: var(--color-accent);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.resume-card__heading {
+    color: var(--color-text);
+
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+}
+
+.resume-card__subheading {
+    margin-top: 0.25rem;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+}
+
+.resume-card__meta {
+    margin-top: 0.5rem;
+
+    color: var(--color-text-subtle);
+
+    font-size: var(--font-size-xs);
+}
+
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.resume-skill-group + .resume-skill-group {
+    margin-top: 1.25rem;
+}
+
+.resume-skill-group__label {
+    margin-bottom: 0.55rem;
+
+    color: var(--color-text);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+}
+
+.resume-skill-group__copy {
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+    line-height: 1.65;
+}
+
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    .site-header,
+    .site-footer,
+    .resume-hero__actions {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #111 !important;
+    }
+
+    .resume-hero,
+    .resume-contact,
+    .resume-page {
+        background: #fff !important;
+    }
+
+    .resume-hero {
+        padding-top: 1rem;
+    }
+
+    .resume-layout {
+        grid-template-columns: 1.5fr 0.7fr;
+
+        gap: 2rem;
+    }
+
+    .resume-card {
+        break-inside: avoid;
+
+        background: transparent;
+
+        border-color: #ccc;
+    }
+
+    .resume-entry {
+        break-inside: avoid;
+    }
+
+}
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+    .resume-hero {
+        padding-top: 6rem;
+    }
+
+    .resume-hero__layout {
+        grid-template-columns: 1fr;
+
+        align-items: start;
+    }
+
+    .resume-layout {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+    .resume-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: var(--space-3);
+    }
+
+    .resume-card + .resume-card {
+        margin-top: 0;
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+
+    .resume-hero {
+        padding-top: 5.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .resume-hero__actions {
+        width: 100%;
+    }
+
+    .resume-hero__actions .button {
+        flex: 1 1 0;
+    }
+
+    .resume-contact__inner {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 0.55rem;
+    }
+
+    .resume-page {
+        padding-top: 2rem;
+    }
+
+    .resume-entry {
+        grid-template-columns: 1fr;
+
+        gap: 0.5rem;
+    }
+
+    .resume-entry__date {
+        color: var(--color-accent);
+    }
+
+    .resume-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+}

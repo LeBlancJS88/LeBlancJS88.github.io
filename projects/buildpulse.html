@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>BuildPulse - Jeremy LeBlanc</title>
+
+    <meta
+        name="description"
+        content="BuildPulse case study by Jeremy LeBlanc — a Unity QA telemetry and performance reporting tool."
+    >
+
+
+    <!-- ===================================================
+         FONT
+         =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ===================================================
+         STYLES
+         =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/site.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/pages.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/project-slides.css"
+    >
+
+    <!-- SITE META START -->
+
+    <link
+        rel="icon"
+        href="../assets/images/ui/favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="canonical"
+        href="https://leblancjs88.github.io/projects/buildpulse.html"
+    >
+
+    <meta
+        name="theme-color"
+        content="#071018"
+    >
+
+
+    <!-- Open Graph -->
+
+    <meta
+        property="og:site_name"
+        content="Jeremy LeBlanc"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_US"
+    >
+
+    <meta
+        property="og:title"
+        content="BuildPulse - Jeremy LeBlanc"
+    >
+
+    <meta
+        property="og:description"
+        content="BuildPulse is a Unity QA telemetry and performance reporting tool created by Jeremy LeBlanc for structured internal testing and diagnostics."
+    >
+
+    <meta
+        property="og:url"
+        content="https://leblancjs88.github.io/projects/buildpulse.html"
+    >
+
+    <meta
+        property="og:image"
+        content="https://leblancjs88.github.io/assets/images/projects/buildpulse/featured.png"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="BuildPulse Unity QA telemetry and performance tooling interface."
+    >
+
+
+    <!-- Twitter / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="BuildPulse - Jeremy LeBlanc"
+    >
+
+    <meta
+        name="twitter:description"
+        content="BuildPulse is a Unity QA telemetry and performance reporting tool created by Jeremy LeBlanc for structured internal testing and diagnostics."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://leblancjs88.github.io/assets/images/projects/buildpulse/featured.png"
+    >
+
+    <!-- SITE META END -->
+
+</head>
+
+
+<body>
+
+<div class="site">
+
+
+    <!-- ===================================================
+         HEADER
+         =================================================== -->
+
+    <header class="site-header">
+
+        <div class="container site-header__inner">
+
+            <a
+                class="site-brand"
+                href="../index.html"
+                aria-label="Jeremy LeBlanc home"
+            >
+                Jeremy
+                <span class="site-brand__accent">
+                    LeBlanc
+                </span>
+            </a>
+
+
+            <nav
+                class="site-nav"
+                aria-label="Primary navigation"
+            >
+
+                <a
+                    class="site-nav__link"
+                    href="../index.html"
+                >
+                    Home
+                </a>
+
+                <a
+                    class="site-nav__link is-active"
+                    href="../portfolio.html"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    class="site-nav__link"
+                    href="../resume.html"
+                >
+                    Resume
+                </a>
+
+                <a
+                    class="site-nav__link"
+                    href="../contact.html"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <button
+                class="mobile-nav-toggle"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+
+                <span class="mobile-nav-toggle__icon">
+                    <span></span>
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ===================================================
+         MAIN
+         =================================================== -->
+
+    <main>
+
+
+        <!-- ===============================================
+             PROJECT HERO
+             =============================================== -->
+
+        <section class="section project-hero">
+
+            <div class="container">
+
+
+                <a
+                    class="project-hero__back"
+                    href="../portfolio.html"
+                >
+                    ← Back to Portfolio
+                </a>
+
+
+                <div class="project-hero__media">
+
+
+                    <img
+                        src="../assets/images/projects/buildpulse/featured.png"
+                        alt="BuildPulse Unity editor interface"
+                    >
+
+
+                    <div class="project-hero__content">
+
+
+                        <div class="project-label">
+                            Unity Tooling
+                        </div>
+
+
+                        <h1 class="heading-page project-hero__title">
+                            BuildPulse
+                        </h1>
+
+
+                        <p class="project-hero__subtitle">
+                            QA Telemetry · Performance · Editor Tooling
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =======================================
+                     PROJECT DETAILS
+                     ======================================= -->
+
+                <div class="project-details">
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Role
+                        </div>
+
+                        <div class="project-details__value">
+                            Creator & Developer
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Engine
+                        </div>
+
+                        <div class="project-details__value">
+                            Unity
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Focus
+                        </div>
+
+                        <div class="project-details__value">
+                            QA & Performance Tooling
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details__item">
+
+                        <div class="project-details__label">
+                            Technology
+                        </div>
+
+                        <div class="project-details__value">
+                            C# · Unity Editor
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================================
+             PROJECT SLIDE DECK
+             =============================================== -->
+
+        <section class="project-deck">
+
+            <div class="container">
+
+
+                <!-- =======================================
+                     UTILITY BAR
+                     ======================================= -->
+
+                <div class="project-deck__utility">
+
+                    <div class="project-deck__utility-info">
+
+                        <div class="project-label">
+                            Built With
+                        </div>
+
+
+                        <div class="tag-list">
+
+                            <span class="tag">
+                                Unity
+                            </span>
+
+                            <span class="tag">
+                                C#
+                            </span>
+
+                            <span class="tag">
+                                Editor Tooling
+                            </span>
+
+                            <span class="tag">
+                                Telemetry
+                            </span>
+
+                            <span class="tag">
+                                Performance
+                            </span>
+
+                            <span class="tag">
+                                JSON
+                            </span>
+
+                            <span class="tag">
+                                Webhooks
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =======================================
+                     COMPLETE SLIDE DECK
+                     ======================================= -->
+
+                <div data-project-deck>
+
+
+                    <!-- ===================================
+                         NAVIGATION
+                         =================================== -->
+
+                    <div class="project-deck__navigation">
+
+
+                        <div
+                            class="project-deck__tabs"
+                            role="tablist"
+                            aria-label="BuildPulse case study sections"
+                        >
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="overview"
+                            >
+                                Overview
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="collection"
+                            >
+                                Collection
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="performance"
+                            >
+                                Performance
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="delivery"
+                            >
+                                Delivery
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="configuration"
+                            >
+                                Configuration
+                            </button>
+
+
+                            <button
+                                class="project-deck__tab"
+                                type="button"
+                                role="tab"
+                                data-project-slide-target="reporting"
+                            >
+                                Reporting
+                            </button>
+
+
+                        </div>
+
+
+
+                        <div class="project-deck__counter">
+
+                            <span data-project-slide-current>
+                                1
+                            </span>
+
+                            /
+
+                            <span data-project-slide-total>
+                                6
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ===================================
+                         VIEWPORT
+                         =================================== -->
+
+                    <div class="project-deck__viewport">
+
+
+                        <!-- ===============================
+                             OVERVIEW
+                             =============================== -->
+
+                        <article
+                            id="overview"
+                            class="project-slide"
+                            data-project-slide
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Overview
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Making internal testing more useful
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        BuildPulse is a Unity QA telemetry
+                                        and performance reporting tool
+                                        designed to make internal testing
+                                        easier to analyze and act on.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Instead of depending on testers to
+                                        manually document technical
+                                        information, BuildPulse gathers
+                                        useful runtime context during the
+                                        test session.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        The resulting data can then be
+                                        packaged into a consistent report
+                                        and delivered into the team's
+                                        development workflow.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/buildpulse/overview.png"
+                                    alt="BuildPulse overview interface"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             COLLECTION
+                             =============================== -->
+
+                        <article
+                            id="collection"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Collection
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Capturing the context behind a test session
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        BuildPulse can collect system
+                                        information, graphics settings,
+                                        runtime performance data and
+                                        gameplay-related diagnostic
+                                        information during a session.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        The goal is to preserve enough
+                                        technical context that developers
+                                        can investigate a report without
+                                        requiring the tester to manually
+                                        reconstruct their environment.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Collection systems can be enabled
+                                        independently so teams can gather
+                                        the information they need without
+                                        forcing every category into every
+                                        test session.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/buildpulse/collection.png"
+                                    alt="BuildPulse telemetry collection interface"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             PERFORMANCE
+                             =============================== -->
+
+                        <article
+                            id="performance"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Performance Telemetry
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Turning “it ran badly” into measurable data
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        Performance collection includes
+                                        average, minimum and maximum FPS,
+                                        together with 1% and 0.1% low
+                                        measurements.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Frame, CPU, main-thread and render
+                                        timings provide more diagnostic
+                                        value than relying on a single FPS
+                                        measurement.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Memory sampling and worst-frame
+                                        capture help preserve short-lived
+                                        performance problems that could
+                                        otherwise disappear inside session
+                                        averages.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/buildpulse/performance.png"
+                                    alt="BuildPulse performance telemetry interface"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             DELIVERY
+                             =============================== -->
+
+                        <article
+                            id="delivery"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Delivery & Webhooks
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Moving reports into the team's workflow
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        Collecting telemetry is only useful
+                                        if the resulting report reaches
+                                        the people who need to investigate
+                                        it.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        BuildPulse includes configurable
+                                        webhook delivery so reports can be
+                                        sent directly into an external
+                                        development or QA workflow.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Connection testing and validation
+                                        are exposed inside the editor,
+                                        allowing delivery problems to be
+                                        found before a test build is
+                                        distributed.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/buildpulse/delivery.png"
+                                    alt="BuildPulse delivery and webhook configuration"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             CONFIGURATION
+                             =============================== -->
+
+                        <article
+                            id="configuration"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Configuration & Validation
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    A tool other developers can actually configure
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        BuildPulse exposes configuration
+                                        for the execution environment,
+                                        telemetry collection and
+                                        performance sampling through the
+                                        Unity editor.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Parameters such as warmup time,
+                                        memory sampling and worst-frame
+                                        collection can be adjusted without
+                                        modifying the underlying code.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        Setup and validation workflows are
+                                        built into the editor interface so
+                                        a project can confirm BuildPulse is
+                                        ready before producing a test
+                                        build.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/buildpulse/settings.png"
+                                    alt="BuildPulse settings interface"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+
+                        <!-- ===============================
+                             REPORTING
+                             =============================== -->
+
+                        <article
+                            id="reporting"
+                            class="project-slide"
+                            data-project-slide
+                            hidden
+                        >
+
+
+                            <div class="project-slide__copy">
+
+                                <div class="eyebrow project-slide__label">
+                                    Structured Reporting
+                                </div>
+
+
+                                <h2 class="project-slide__title">
+                                    Turning a test session into structured data
+                                </h2>
+
+
+                                <div class="project-slide__body">
+
+                                    <p>
+
+                                        BuildPulse packages captured
+                                        session information into structured
+                                        JSON rather than relying on
+                                        free-form technical notes.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        System, configuration,
+                                        performance and diagnostic
+                                        information are separated into
+                                        predictable groups that can be
+                                        inspected by developers or passed
+                                        into additional tooling.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        The report format is versioned so
+                                        the schema can evolve while
+                                        remaining identifiable across
+                                        builds and tool revisions.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <figure class="project-slide__visual">
+
+                                <img
+                                    class="project-slide__image"
+                                    src="../assets/images/projects/buildpulse/report.png"
+                                    alt="Example structured JSON report generated by BuildPulse"
+                                >
+
+                            </figure>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- ===================================
+                         CONTROLS
+                         =================================== -->
+
+                    <div class="project-deck__controls">
+
+
+                        <button
+                            class="project-deck__control"
+                            type="button"
+                            data-project-slide-previous
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M19 12H5M10 7L5 12L10 17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+
+                            Previous
+
+                        </button>
+
+
+
+                        <button
+                            class="project-deck__control"
+                            type="button"
+                            data-project-slide-next
+                        >
+
+                            Next
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M5 12H19M14 7L19 12L14 17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container site-footer__inner">
+
+            <div class="site-footer__copyright">
+                © Jeremy LeBlanc
+            </div>
+
+
+            <div class="site-footer__links">
+
+                <a
+                    class="site-footer__link"
+                    href="../portfolio.html"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    class="site-footer__link"
+                    href="../resume.html"
+                >
+                    Resume
+                </a>
+
+                <a
+                    class="site-footer__link"
+                    href="../contact.html"
+                >
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+<script src="../assets/js/site.js"></script>
+
+<script src="../assets/js/project-slides.js"></script>
+
+
+</body>
+
+</html>
