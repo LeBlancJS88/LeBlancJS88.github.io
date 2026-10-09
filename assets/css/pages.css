@@ -11,7 +11,7 @@
    .home-hero {
     position: relative;
 
-    min-height: min(710px, 79vh);
+    min-height: min(660px, 76vh);
 
     display: flex;
     flex-direction: column;
@@ -115,37 +115,53 @@
     flex-wrap: wrap;
     gap: var(--space-3);
 
-    margin-top: var(--space-4);
+    margin-top: 2rem;
 }
 
-.home-hero__skills {
-    position: relative;
-    z-index: 2;
+.home-hero__actions .button {
+    min-width: 176px;
+    min-height: 56px;
 
+    padding: 1rem 1.75rem;
+
+    font-size: 0.95rem;
+}
+
+.home-hero__actions .button__icon {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* =========================================================
+   HOME - CORE CAPABILITIES
+   ========================================================= */
+
+.home-skills {
     background:
         linear-gradient(
             to bottom,
-            rgba(8, 13, 15, 0.72),
+            rgba(8, 13, 15, 0.78),
             rgba(8, 13, 15, 0.98)
         );
 
     border-top: 1px solid var(--color-border);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
 }
 
+.home-skills .skill-strip {
+    border-top: 0;
+}
 
 /* Compact desktop skill strip */
 
-.home-hero__skills .skill-strip__item {
+.home-skills .skill-strip__item {
     min-height: 90px;
 
     padding-top: var(--space-3);
     padding-bottom: var(--space-3);
 }
 
-.home-hero__skills .skill-strip__icon {
+.home-skills .skill-strip__icon {
     width: 30px;
     height: 30px;
 }
@@ -610,7 +626,7 @@
 @media (max-width: 1199px) {
 
     .home-hero {
-        min-height: 660px;
+        min-height: 620px;
     }
 
     .home-hero__copy {
@@ -636,7 +652,7 @@
 @media (max-width: 899px) {
 
     .home-hero {
-        min-height: 640px;
+        min-height: 600px;
     }
 
     .home-hero__background::after {
@@ -721,7 +737,7 @@
 @media (max-width: 639px) {
 
     .home-hero {
-        min-height: 620px;
+        min-height: 570px;
     }
 
     .home-hero__content {
@@ -780,21 +796,22 @@
     }
 
     .home-hero__actions .button {
-        flex: 1 1 auto;
+        flex: 1 1 calc(50% - 0.5rem);
 
-        min-height: 46px;
+        min-width: 0;
+        min-height: 52px;
 
-        padding-inline: 1rem;
+        padding: 0.9rem 1rem;
     }
 
 
     /* Mobile skills */
 
-    .home-hero__skills .skill-strip {
+    .home-skills .skill-strip {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .home-hero__skills .skill-strip__item {
+    .home-skills .skill-strip__item {
         min-height: 70px;
 
         gap: 0.75rem;
@@ -802,16 +819,16 @@
         padding: 0.9rem 1rem;
     }
 
-    .home-hero__skills .skill-strip__icon {
+    .home-skills .skill-strip__icon {
         width: 25px;
         height: 25px;
     }
 
-    .home-hero__skills .skill-strip__title {
+    .home-skills .skill-strip__title {
         font-size: 0.82rem;
     }
 
-    .home-hero__skills .skill-strip__description {
+    .home-skills .skill-strip__description {
         display: none;
     }
 
@@ -918,23 +935,23 @@
 
 @media (max-width: 420px) {
 
-    .home-hero__skills .skill-strip {
+    .home-skills .skill-strip {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .home-hero__skills .skill-strip__item {
+    .home-skills .skill-strip__item {
         border-bottom: 1px solid var(--color-border);
     }
 
-    .home-hero__skills .skill-strip__item:nth-child(odd) {
+    .home-skills .skill-strip__item:nth-child(odd) {
         border-right: 1px solid var(--color-border);
     }
 
-    .home-hero__skills .skill-strip__item:nth-child(even) {
+    .home-skills .skill-strip__item:nth-child(even) {
         border-right: 0;
     }
 
-    .home-hero__skills .skill-strip__item:nth-last-child(-n + 2) {
+    .home-skills .skill-strip__item:nth-last-child(-n + 2) {
         border-bottom: 0;
     }
 
