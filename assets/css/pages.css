@@ -175,7 +175,7 @@
 .home-featured {
     scroll-margin-top: 1.5rem;
 
-    padding-top: 3.75rem;
+    padding-top: 2.5rem;
     padding-bottom: 3.75rem;
 
     background:
@@ -677,7 +677,7 @@
     }
 
     .home-featured {
-        padding-top: var(--space-6);
+        padding-top: 2.5rem;
         padding-bottom: var(--space-6);
     }
 
@@ -836,7 +836,7 @@
     /* Featured work */
 
     .home-featured {
-        padding-top: 2.25rem;
+        padding-top: 2rem;
         padding-bottom: var(--space-5);
     }
 
