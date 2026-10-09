@@ -188,6 +188,8 @@
 }
 
 .home-featured .section-header {
+    align-items: center;
+
     margin-bottom: var(--space-4);
 }
 
@@ -841,6 +843,8 @@
     }
 
     .home-featured .section-header {
+        align-items: flex-start;
+
         margin-bottom: var(--space-3);
     }
 
